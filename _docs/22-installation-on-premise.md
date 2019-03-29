@@ -27,7 +27,7 @@ Login into the machine as user: sibylla (group sibylla).
 
 Get the product from here and place in the parent directory you want sibylla to be installed:
 - cd <parent directory of the sibylla product> (Suggested: the home directory of the sibylla user)
-- wget https://github.com/green-vulcano/releases/download/sibylla/sibylla-1.0.tar
+- wget [https://github.com/green-vulcano/releases/download/sibylla/sibylla-1.0.tar](https://github.com/green-vulcano/releases/download/sibylla/sibylla-1.0.tar)
 
 ### Prepare the directory structure
 
@@ -78,7 +78,7 @@ you have full control of these components and save the connection parameters som
 connection information.
 
 The procedure that follows consider the "portable application" approach:
-- [https://en.wikipedia.org/wiki/Portable_application]
+- [https://en.wikipedia.org/wiki/Portable_application](https://en.wikipedia.org/wiki/Portable_application)
 
 Create the 3rd parties directory structure:
 - mkdir $SIBYL_HOME/3rd-party
@@ -92,29 +92,29 @@ Create the 3rd parties directory structure:
 Download the packages into this directory: $SIBYL_HOME/downloads
 
 - Mysql
-  - [https://dev.mysql.com/downloads/mysql]
+  - [https://dev.mysql.com/downloads/mysql](https://dev.mysql.com/downloads/mysql)
     - Linux generic - 64 bits
-      - [https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz]
+      - [mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz](https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz)
 - Mongo
-  - [https://www.mongodb.com/download-center/community]
+  - [https://www.mongodb.com/download-center/community](https://www.mongodb.com/download-center/community)
     - 4.0.6 - Ubuntu 18.04 64 bits - tgz
-      - [https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1804-4.0.6.tgz]
+      - [mongodb-linux-x86_64-ubuntu1804-4.0.6.tgz](https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1804-4.0.6.tgz)
 - Kafka
   - [https://kafka.apache.org/downloads]
     - 2.1.1 - Scala 2.12 - kafka_2.12-2.1.1.tgz (asc, sha512)
-      - [https://www.apache.org/dyn/closer.cgi?path=/kafka/2.1.1/kafka_2.12-2.1.1.tgz]
+      - [kafka_2.12-2.1.1.tgz](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.1.1/kafka_2.12-2.1.1.tgz)
 - ActiveMQ
-  - [http://activemq.apache.org/download.html]
+  - [http://activemq.apache.org/download.html](http://activemq.apache.org/download.html)
     - Unix/Linux/Cygwin Distribution
-      - [http://www.apache.org/dyn/closer.cgi?filename=/activemq/5.15.8/apache-activemq-5.15.8-bin.tar.gz&action=download]
+      - [apache-activemq-5.15.8-bin.tar.gz](http://www.apache.org/dyn/closer.cgi?filename=/activemq/5.15.8/apache-activemq-5.15.8-bin.tar.gz&action=download)
 - EMQTT
   - [https://www.emqx.io/downloads/emq/broker]
     - Linux - 3.1* - Ubuntu 18.04 - Zip
-      - [https://www.emqx.io/downloads/broker/v3.1-beta.2/emqx-ubuntu18.04-v3.1-beta.2.zip]
+      - [emqx-ubuntu18.04-v3.1-beta.2.zip](https://www.emqx.io/downloads/broker/v3.1-beta.2/emqx-ubuntu18.04-v3.1-beta.2.zip)
 - Metabase
-  - [https://www.metabase.com]
+  - [https://www.metabase.com](https://www.metabase.com)
     - Custom install
-      - [http://downloads.metabase.com/v0.31.2/metabase.jar]
+      - [metabase.jar](http://downloads.metabase.com/v0.31.2/metabase.jar)
 
 ### Install third party software (portable option)
 
@@ -137,7 +137,7 @@ Untar mysql into the sibylla/3rd-party/db-domain/bin directory:
 
 Initialize the DB:
 - In case of doubts follow the official procudure defined at:
-  - https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html
+  - [https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html](https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html]
 - cd $SIBYL_HOME/3rd-party/db-domain
 - vi config/sibylla.cnf (or set any database option you prefer)
   ```
