@@ -1,0 +1,89 @@
+# main links
+main:
+  - title: "Home"
+    url: /
+  - title: "Use cases"
+    url: /use-cases/
+  - title: "Customers"
+    url: /customers/
+  - title: "Partners"
+    url: /partners/
+  - title: "About GVT"
+    url: /about-gvt/
+  - title: "Docs"
+    url: /docs/www-what-is-it/
+
+# documentation links
+docs:
+  - title: What, why, when
+    children:
+      - title: "What is it"
+        url: /docs/www-what-is-it/
+      - title: "Why we built it"
+        url: /docs/www-why-we-built-it/
+      - title: "When to use it"
+        url: /docs/www-when-to-use-it/
+  - title: Installation
+    children:
+      - title: "Deployment options"
+        url: /docs/installation-deployment-options/
+      - title: "On premise"
+        url: /docs/installation-on-premise/
+      - title: "Docker"
+        url: /docs/installation-docker/
+      - title: "Cloud"
+        url: /docs/installation-cloud/
+  - title: Getting started
+    children:
+      - title: "Console overview"
+        url: /docs/getting-started-console-overview/
+      - title: "First IoT service"
+        url: /docs/getting-started-first-iot-service/
+      - title: "Next steps"
+        url: /docs/getting-started-next-steps/
+  - title: Deep intro
+    children:
+      - title: "Overview"
+        url: /docs/deep-intro-overview/
+      - title: "Oneway journey"
+        url: /docs/deep-intro-oneway-journey/
+      - title: "Return journey"
+        url: /docs/deep-intro-return-journey/
+  - title: Architecture
+    children:
+      - title: "Overview"
+        url: /docs/architecture-overview/
+      - title: "Edge computing"
+        url: /docs/architecture-edge-computing/
+      - title: "The gateway"
+        url: /docs/architecture-gateway/
+      - title: "Kafka: circulatory system"
+        url: /docs/architecture-gateway/
+      - title: "The datapumps"
+        url: /docs/architecture-gateway/
+      - title: "Business modules"
+        url: /docs/architecture-business-modules/
+  - title: Functionalities
+    children:
+      - title: "Sense and preserve data"
+        url: /docs/functionalities-sense-and-preserve-data/
+      - title: "Alarms"
+        url: /docs/functionalities-alarms/
+      - title: "Reports"
+        url: /docs/functionalities-reports/
+      - title: "Prediction"
+        url: /docs/functionalities-prediction/
+      - title: "Actions"
+        url: /docs/functionalities-actions/
+      - title: "Data certification"
+        url: /docs/functionalities-data-certification/
+  - title: Configuration
+    children:
+      - title: "Core"
+        url: /docs/setup-core/
+      - title: "Console"
+        url: /docs/setup-console/
+      - title: "Gateways"
+        url: /docs/setup-gateways/
+      - title: "Datapump"
+        url: /docs/setup-datapump/
