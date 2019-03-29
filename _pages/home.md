@@ -38,22 +38,3 @@ feature_row:
 ---
 
 {% include feature_row %}
-
-<table>
-  <tr>
-    <td>Top 3 features</td>
-    <td>Description</td>
-  </tr>
-  <tr>
-    <td>eXtreme scalability</td>
-    <td>We have developed a platform that can be setup to manage any type of load. It can do so, through extreme scalability of any component of the platform.<br/><br/>From a single industrial computer on the field to a cluster of thousands of connected computer in the cloud, we can tailor the solution to best respond to your needs.</td>
-  </tr>
-  <tr>
-    <td>Open API</td>
-    <td>Any operation you can do from the console can be also done via API.<br/><br/>The entire platform follows the "API first approach".<br/><br/>Note: If the console, with its dashboards customizable by users, wouldn't be enough, we at GreenVulcano can rapidly implement vertical solution with a personalized console to operate your own installation of the **GV IoT platform**.</td>
-  </tr>
-  <tr>
-    <td>Security by design</td>
-    <td>Your data is what it is important. They are secured by design, using advanced access policies and protections at the gates (gateways) and on the data.</td>
-  </tr>
-</table>
