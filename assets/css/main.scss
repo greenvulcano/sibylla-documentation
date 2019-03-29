@@ -7,13 +7,18 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-.toc-btf {
-    float: right;
-    position: fixed;
-    width: 300px;
-    right: 0px;
-    top: 170px;
-    background: rgba(229, 232, 232, 0.5);
-    border: 1px solid #0096d6;
-    padding: 5px;
+.sidebar__right {
+  margin-bottom: 1em;
+
+  @include breakpoint($large) {
+    position: sticky !important; /* added to make toc scroll with page */
+    float: right !important; /* added to make toc scroll with page */
+    top: 0;
+    right: 0;
+    width: $right-sidebar-width-narrow;
+    margin-right: -1 * $right-sidebar-width-narrow;
+    padding-left: 1em;
+    padding-top: 1em !important; /* added to make toc scroll with page */
+    z-index: 10;
+  }
 }
