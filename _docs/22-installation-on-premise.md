@@ -120,7 +120,7 @@ Download the packages into this directory: $SIBYL_HOME/downloads
 
 This part of the procedure will prepare and test all 3rd party software.
 
-#### MySQL
+**MySQL**
 
 Prepare the directory stucture for MySQL:
 - mkdir $SIBYL_HOME/3rd-party/db-domain/bin
@@ -179,12 +179,12 @@ Copy the start/stop script for MySQL:
 - cp $SIBYL_HOME/scripts/mysql/scripts/start.sh scripts
 - cp $SIBYL_HOME/scripts/mysql/scripts/stop.sh scripts
 
-#### Mongo
+**Mongo**
 
 Prepare the directory stucture:
 - mkdir $SIBYL_HOME/3rd-party/xxx
 
-#### Kafka
+**Kafka**
 
 Prepare the directory stucture for the new broker:
 - mkdir $SIBYL_HOME/3rd-party/sibylla-kafka-a
@@ -222,7 +222,7 @@ Configure Kafka configuration:
 - cd kafka
 - vi TBF
 
-#### ActiveMQ
+**ActiveMQ**
 
 Prepare the directory stucture:
 - mkdir $SIBYL_HOME/3rd-party/jms-domain/jms-main
@@ -256,12 +256,12 @@ Prepare the directory stucture:
         <policyEntry topic=">" gcInactiveDestinations="true" inactiveTimoutBeforeGC="600000" >
         ```
 
-#### EMQTT
+**EMQTT**
 
 Prepare the directory stucture:
 - mkdir $SIBYL_HOME/3rd-party/xxx
 
-#### Metabase
+**Metabase**
 
 Prepare the directory stucture:
 - mkdir $SIBYL_HOME/3rd-party/xxx
