@@ -108,7 +108,7 @@ Download the packages into this directory: $SIBYL_HOME/downloads
     - Unix/Linux/Cygwin Distribution
       - [apache-activemq-5.15.8-bin.tar.gz](http://www.apache.org/dyn/closer.cgi?filename=/activemq/5.15.8/apache-activemq-5.15.8-bin.tar.gz&action=download)
 - EMQTT
-  - [https://www.emqx.io/downloads/emq/broker]
+  - [https://www.emqx.io/downloads/emq/broker](https://www.emqx.io/downloads/emq/broker)
     - Linux - 3.1* - Ubuntu 18.04 - Zip
       - [emqx-ubuntu18.04-v3.1-beta.2.zip](https://www.emqx.io/downloads/broker/v3.1-beta.2/emqx-ubuntu18.04-v3.1-beta.2.zip)
 - Metabase
