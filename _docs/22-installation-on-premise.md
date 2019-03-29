@@ -94,27 +94,27 @@ Download the packages into this directory: $SIBYL_HOME/downloads
 - Mysql
   - [https://dev.mysql.com/downloads/mysql]
     - Linux generic - 64 bits
-      - https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz
+      - [https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz]
 - Mongo
-  - https://www.mongodb.com/download-center/community
+  - [https://www.mongodb.com/download-center/community]
     - 4.0.6 - Ubuntu 18.04 64 bits - tgz
-      - https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1804-4.0.6.tgz
+      - [https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1804-4.0.6.tgz]
 - Kafka
-  - https://kafka.apache.org/downloads
+  - [https://kafka.apache.org/downloads]
     - 2.1.1 - Scala 2.12 - kafka_2.12-2.1.1.tgz (asc, sha512)
-      - https://www.apache.org/dyn/closer.cgi?path=/kafka/2.1.1/kafka_2.12-2.1.1.tgz
+      - [https://www.apache.org/dyn/closer.cgi?path=/kafka/2.1.1/kafka_2.12-2.1.1.tgz]
 - ActiveMQ
-  - http://activemq.apache.org/download.html
+  - [http://activemq.apache.org/download.html]
     - Unix/Linux/Cygwin Distribution
-      - http://www.apache.org/dyn/closer.cgi?filename=/activemq/5.15.8/apache-activemq-5.15.8-bin.tar.gz&action=download
+      - [http://www.apache.org/dyn/closer.cgi?filename=/activemq/5.15.8/apache-activemq-5.15.8-bin.tar.gz&action=download]
 - EMQTT
-  - https://www.emqx.io/downloads/emq/broker
+  - [https://www.emqx.io/downloads/emq/broker]
     - Linux - 3.1* - Ubuntu 18.04 - Zip
-      - https://www.emqx.io/downloads/broker/v3.1-beta.2/emqx-ubuntu18.04-v3.1-beta.2.zip
+      - [https://www.emqx.io/downloads/broker/v3.1-beta.2/emqx-ubuntu18.04-v3.1-beta.2.zip]
 - Metabase
-  - https://www.metabase.com
+  - [https://www.metabase.com]
     - Custom install
-      - http://downloads.metabase.com/v0.31.2/metabase.jar
+      - [http://downloads.metabase.com/v0.31.2/metabase.jar]
 
 ### Install third party software (portable option)
 
