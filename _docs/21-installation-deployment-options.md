@@ -37,4 +37,4 @@ Each element of this architecture can be deployed on a separated group of machin
 
 Depending on yor business, a good installation scenario that also meets high availability requirements (with failover
 and balancing) requires a minimum of three nodes and an ideal configuration that uses 16 nodes, where each layer is on
-an isolated and dedicated instance.
+an isolated and dedicated group of machines.
