@@ -92,15 +92,15 @@ Create the 3rd parties directory structure:
 Download the packages into this directory: $SIBYL_HOME/downloads
 
 - Mysql
-  - [https://dev.mysql.com/downloads/mysql](https://dev.mysql.com/downloads/mysql)
+  - [MySQL](https://dev.mysql.com/downloads/mysql)
     - Linux generic - 64 bits
       - [mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz](https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz)
 - Mongo
-  - [https://www.mongodb.com/download-center/community](https://www.mongodb.com/download-center/community)
+  - [Mongo](https://www.mongodb.com/download-center/community)
     - 4.0.6 - Ubuntu 18.04 64 bits - tgz
       - [mongodb-linux-x86_64-ubuntu1804-4.0.6.tgz](https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1804-4.0.6.tgz)
 - Kafka
-  - [https://kafka.apache.org/downloads]
+  - [https://kafka.apache.org/downloads](https://kafka.apache.org/downloads)
     - 2.1.1 - Scala 2.12 - kafka_2.12-2.1.1.tgz (asc, sha512)
       - [kafka_2.12-2.1.1.tgz](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.1.1/kafka_2.12-2.1.1.tgz)
 - ActiveMQ
