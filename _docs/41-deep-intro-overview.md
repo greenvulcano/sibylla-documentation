@@ -29,10 +29,15 @@ We will also describe what choices we do have at each step. For example:
 - What about filtering and buffering?
 
 ## High level architecture
+
 The architecture of the platform will be described in a specific chapter, but for now it is useful to keep it at hand
 while we explain some aspects of the platform.
 
+xxx Disegno architettura
+
 ## From Things to Humans
+
+xxx Disegno
 
 We will describe all the steps that a single measure will do from Things to Humans:
 - Starting point - the Things
@@ -49,6 +54,8 @@ We will describe all the steps that a single measure will do from Things to Huma
 
 ## From Humans to Things
 
+xxx Disegno
+
 We will describe all the steps a single measure will do from Humans to Things:
 - Starting point - the Humans
   - We will describe what a person can do to act on a Thing: open a door, turn on the heat, turn off lights, etc.
@@ -61,7 +68,7 @@ We will describe all the steps a single measure will do from Humans to Things:
 - The EdgeGateway receive the command
 - End point: the Things
 
-## Scenario: Tunnels monitoring
+## Tunnels monitoring scenario
 
 Foto tunnel
 
@@ -111,3 +118,5 @@ xxx Tabella foto HBM, sensori, etc.
 The picture 4 of the BraggMONITOR application (window application that connects via LAN to the Industrial BraggMETER)
 shows the signals from the strain sensors connected to the Industrial BraggMETER, that in this case (see picture 1) has
 four fibre cables doors.
+
+xxx Tabella foto elementi in galleria
