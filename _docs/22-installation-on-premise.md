@@ -78,7 +78,7 @@ you have full control of these components and save the connection parameters som
 connection information.
 
 The procedure that follows consider the "portable application" approach:
-- https://en.wikipedia.org/wiki/Portable_application. 
+- [https://en.wikipedia.org/wiki/Portable_application]
 
 Create the 3rd parties directory structure:
 - mkdir $SIBYL_HOME/3rd-party
@@ -92,7 +92,7 @@ Create the 3rd parties directory structure:
 Download the packages into this directory: $SIBYL_HOME/downloads
 
 - Mysql
-  - https://dev.mysql.com/downloads/mysql
+  - [https://dev.mysql.com/downloads/mysql]
     - Linux generic - 64 bits
       - https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz
 - Mongo
