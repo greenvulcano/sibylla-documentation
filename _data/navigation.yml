@@ -63,6 +63,14 @@ docs:
         url: /docs/architecture-gateway/
       - title: "Business modules"
         url: /docs/architecture-business-modules/
+  - title: Edge gateways
+    children:
+      - title: "FS22 Industrial BraggMETER"
+        url: /docs/edge-gateways-fs22-industrial-braggmeter/
+      - title: "fibrisTerre fTB 2505 Brillouin"
+        url: /docs/edge-gateways-fibrisTerre-ftb-2505-brillouin/
+      - title: "New"
+        url: /docs/edge-gateways-new/
   - title: Functionalities
     children:
       - title: "Sense and preserve data"
