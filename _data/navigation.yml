@@ -69,8 +69,8 @@ docs:
         url: /docs/edge-gateways-fs22-industrial-braggmeter/
       - title: "fibrisTerre fTB 2505 Brillouin"
         url: /docs/edge-gateways-fibrisTerre-ftb-2505-brillouin/
-      - title: "New"
-        url: /docs/edge-gateways-new/
+      - title: "Micron Optics sm125"
+        url: /docs/edge-gateways-micron-optics-sm125/
   - title: Functionalities
     children:
       - title: "Sense and preserve data"
