@@ -6,3 +6,14 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.toc-btf {
+    float: right;
+    position: fixed;
+    width: 300px;
+    right: 0px;
+    top: 170px;
+    background: rgba(229, 232, 232, 0.5);
+    border: 1px solid #0096d6;
+    padding: 5px;
+}
