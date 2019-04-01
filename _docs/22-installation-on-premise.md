@@ -151,7 +151,7 @@ Initialize the DB:
   sql_mode = NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
   basedir = "<changeit: fullpath to Sibylla>/3rd-party/db-domain/bin/mysql"
   datadir = "<changeit: fullpath to Sibylla>/3rd-party/db-domain/data"
-  log-error = "<changeit: fullpath to Sibylla>/3rd-party/db-domain/logs/error_log.err"
+  log-error = "<changeit: fullpath to Sibylla>/3rd-party/db-domain/logs/mysql.log"
 
   port = "3306"
 
@@ -352,9 +352,10 @@ Prepare the directory stucture:
 - Remove the transportConnector with name="amqp"
   - cd activemq/conf
   - vi activemq.xml
-    - Remove the line with the amqp transportConnector
+    - Remove the line with the amqp and mqtt transportConnector
     ```
     <transportConnector name="amqp" uri="amqp://0.0.0.0:5672?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+
     ```
     - Set autopurge of the destination with no consumers after long time (NOTE: Only if used for non persistence scenario)
       - Replace the row
