@@ -399,6 +399,11 @@ Configure Metabase:
 
 ### Configure the application
 
+- wget https://github.com/greenvulcano/gviot-platform/releases/download/1.0.0-SNAPSHOT/gviot-core-1.0.0-SNAPSHOT.jar
+- wget https://github.com/greenvulcano/gviot-platform/releases/download/1.0.0-SNAPSHOT/gviot-datapump-mongodb-1.0.0-SNAPSHOT.jar
+- wget https://github.com/greenvulcano/gviot-platform/releases/download/1.0.0-SNAPSHOT/gviot-datapump-websocket-1.0.0-SNAPSHOT.jar
+- wget https://github.com/greenvulcano/gviot-platform/releases/download/1.0.0-SNAPSHOT/gviot-gateway-http-1.0.0-SNAPSHOT.jar
+
 ### Test the start and stop of the application
 
 ### Next reading: Getting started

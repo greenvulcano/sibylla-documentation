@@ -33,16 +33,16 @@ It is at this last step that the business value is added:
 - Reports
 - Prediction
 - Automatic actions
-- Certifications of the data transmitted (ex. in BlockChain)
+- BlockChain certifications of the data transmitted: Source, destination and reports
 
-# Features
+# Features of the modules
 
 The **Sibylla IoT Platform** has been designed to solve many IoT needs. These is a list of its features:
 
 * EdgeGateway
     * It is the component that "talks" to the real object that needs to be monitored and controlled
     * Extensible and flexible architecture
-    * Simple architecture that permits to be easily integrable with the Gateway and the platform
+    * Simple architecture that permits to be easily integrable with the Gateway to access the IoT platform
 * Gateway
     * Its architecture extends and facilitates edge computing
     * Data normalization
@@ -50,47 +50,50 @@ The **Sibylla IoT Platform** has been designed to solve many IoT needs. These is
     * Security gate
     * Support for multi protocol communication between the device and the platform
     * Data ingestion modules to elaborate huge amount of data
-    * Auto provisioning for new Things and Devices. It can be enable ON or OFF from the console
+    * Auto provisioning for new Things and Devices. It can be enabled ON or OFF from the console
 * Decoupling
-    * Based on the Open Source Kafka infrastructure, that proved to be disruptive in many areas
+    * Based on the Open Source Kafka infrastructure, that proved to be disruptive in many areas of application
     * Scalability and isolation for the entire platform
     * Back pressure regulation
-    * Backbone for all internal communication
+    * Backbone for all internal communication (it is its circulatory system)
 * DataPump
     * Security gate
     * Data enrichment
     * Filtering
-    * Multi synch architecture, to support any type of store or streaming systems like: Mongo, Cassandra, relational DBs, Hadoop, Spark, Confluent KSQL and many others
+    * Routing
+    * Multi synch architecture, to support any type of store or streaming systems, like: Mongo, Cassandra, relational
+      DBs, Hadoop, Spark, Confluent KSQL and many others
 * Core
     * "API first" design for use in headless environments
     * Auditing at core API level: any operation on devices, things or networks (D/T/N) is storicized by the platform
     * Query module to get meta info from N/T/D and to get telemetry data from your devices
 * Store
-    * Any combination of Datalakes, BigData, streaming modules
+    * Any combination of Datalakes, BigData or streaming modules
 * General characteristics
     * Built on Open Source technologies: Spring, Kafka, Mongo, MySql, MQTT, Angular, Node
     * Secured by design
-    * Analytics. Real time alerts and CEP
+    * Analytics, real time alerts and CEP
     * Machine learning
     * E2E traceability functionalities
-    * Auto monitoring modules
+    * Self monitoring modules
     * Events generated from D/T/N can trigger event notifications
 * Console
-    * Stream processing
+    * Data navigation
     * Time series graphs on data coming from the devices
     * Frequency analysis
     * Georeferenced graphs and tables
         * Google maps, OpenStreet map, WebGIS
     * Integrated lightweight ticketing system
-    * Integrated logbook for production groups to log activities
+    * Integrated logbook for production groups, to log their activities during shifts
     * Integrated lightweight CMS (docs related to D/T/N: Devices/Things/Network)
 * Business Intelligence modules
     * Alarm definition and management through CEP processing
-    * Scheduled and recurring data analysis and eport generation
+    * Scheduled and recurring data analysis and report generation
     * Certifications of the sensed data using private of public Blockchain
-    * Data analysis using machine learning OpenSource frameworks
-* GV ESB for system integration with other systems
-* GV Claudio for business automation
+    * Data analysis using machine learning OpenSource frameworks: SparkML, tensorflow
+* Other
+    * Integrate other systems through the Open Source GreenVulcano® ESB platform
+    * Automatise your work through GreenVulcano® Claudio
 
 # Top 3 features
 
@@ -112,9 +115,3 @@ The **Sibylla IoT Platform** has been designed to solve many IoT needs. These is
     <td>Your data is what it is important. They are secured by design, using advanced access policies and protections at the gates (gateways) and on the data.</td>
   </tr>
 </table>
-
-# Additional notes
-
-In addition the **Sibylla IoT Platform** can:
-* Integrate other systems through the Open Source GreenVulcano® ESB platform
-* Automatise your work through GreenVulcano® Claudio
