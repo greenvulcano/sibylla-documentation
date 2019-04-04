@@ -15,12 +15,14 @@ To install sibylla on your system you need at least:
 - 16 GB RAM
 - 256 GB of disk space
 
-### Software requirements
+### Prerequisites
 
 To install sibylla on your system you need to install:
 - JRE 11 (commercial or open)
-- node
-- nginx (for running the Sibylla console)
+- node (TBD)
+- nginx (versione: TBD. As the entry point for the Sibylla platform: console, cores, gateways, ...)
+- A user sibylla (group sibylla)
+- Utilities: vi, wget, ...
 
 ### Download the sibylla installation package (community edition):
 
@@ -29,6 +31,8 @@ Login into the machine as user: sibylla (group sibylla).
 Get the product from here and place in the parent directory you want sibylla to be installed:
 - cd <parent directory of the sibylla product> (Suggested: the home directory of the sibylla user)
 - wget https://github.com/green-vulcano/releases/download/sibylla/sibylla-1.0.tar
+  - TBD: il contenuto del file conterrà: sibylla + sottodirectories: scripts, core, console, n-1-...
+    - n-1: deve contenere, script start/stop, application, properties
 
 ### Prepare the directory structure
 
@@ -57,7 +61,8 @@ Application:
 - sibylla/sibylla-core
 
 Networks:
-- mkdir sibylla/sibylla-network-1 (hello world)
+- mkdir sibylla/sibylla-network-1 (Generic JSON/HTTP)
+- mkdir sibylla/sibylla-network-2 (Generic JSON/MQTT)
 - ... other networks will be installed separately
 ```
 
@@ -238,7 +243,7 @@ Prepare the config file:
   # network interfaces
   net:
     port: 27017
-    bindIp: <changeit: hostname>
+    bindIp: <changeit: hostname (use localhost whenever possible)>
 
   # replication:
   #   replSetName: "rs0"
@@ -323,7 +328,7 @@ Configure Kafka:
   […]
   num.partitions=12
   […]
-  zookeeper.connect=<host>:2181
+  zookeeper.connect=changeit: hostname (use localhost whenever possible)>:2181
   Close and save.
   ```
 - vi groups.properties (TBV: A che serve?)
@@ -337,7 +342,7 @@ Configure Kafka:
   Uncomment and set the following rows:
   dataDir=<changeit: fullpath to Sibylla>/gviot-kafka-<changeit: node_id>/runtime/dataDir
   […]
-  advertised.listeners=PLAINTEXT://<host>:9092
+  advertised.listeners=PLAINTEXT://<changeit: hostname (use localhost whenever possible)>:9092
   Close and save.
   ```
 
@@ -376,9 +381,19 @@ Prepare the directory stucture:
         <policyEntry topic=">" gcInactiveDestinations="true" inactiveTimoutBeforeGC="600000" >
         ```
 
-**EMQTT**
+**EMQX**
 
-Prepare the directory stucture:
+Untar the product:
+- cd $SIBYLLA_HOME/3rd-party/mqtt-domain
+- unzip $SIBYLLA_HOME/downloads/emqx-ubuntu18.04-v3.1-beta.2.zip
+
+Version the installation to simplify future upgrade and tranfer of data:
+- mv emqx emqx-v3.1-beta.2
+- ln -s emqx-v3.1-beta.2 emqx
+
+Configure EMQX:
+- The configuration file is under ./emqx/etc
+  - The basic installation does not require any specific configuration
 
 **Metabase**
 
@@ -396,14 +411,45 @@ Untar the product:
 
 Configure Metabase:
 - cd $SIBYLLA_HOME/3rd-party/analytics-domain/metabase
+- vi scripts/start.sh (only if necessary to change exposed port)
+
+Start/stop Metabase:
+- cd $SIBYLLA_HOME/3rd-party/analytics-domain/metabase
+- scripts/start.sh
+- scripts/stop.sh
 
 ### Configure the application
 
-- wget https://github.com/greenvulcano/gviot-platform/releases/download/1.0.0-SNAPSHOT/gviot-core-1.0.0-SNAPSHOT.jar
-- wget https://github.com/greenvulcano/gviot-platform/releases/download/1.0.0-SNAPSHOT/gviot-datapump-mongodb-1.0.0-SNAPSHOT.jar
-- wget https://github.com/greenvulcano/gviot-platform/releases/download/1.0.0-SNAPSHOT/gviot-datapump-websocket-1.0.0-SNAPSHOT.jar
-- wget https://github.com/greenvulcano/gviot-platform/releases/download/1.0.0-SNAPSHOT/gviot-gateway-http-1.0.0-SNAPSHOT.jar
+**Configure sibylla.conf**
+
+Modify the content of the file to reflect your environment:
+
+    ------------------------------------------
+    Instance name            #   port    hosts
+    ------------------------------------------
+    db                                   localhost
+    mongodb                              localhost
+    zk                                   localhost
+    kafka                                localhost
+    jms-main                             localhost
+    metabase                             localhost
+    core                     1   18180   localhost
+    console                              localhost
+    n-1-gateway              1   21100   localhost
+    n-1-datapump             1           localhost
+    n-1-datapump-websocket   1           localhost
+
+**Configure core**
+**Configure console**
+**Configure sibylla-network-1/sibylla-gateway**
+**Configure sibylla-network-1/sibylla-datapump**
+**Configure sibylla-network-1/sibylla-datapump-websocket**
+**Configure sibylla-network-2/sibylla-gateway**
+**Configure sibylla-network-2/sibylla-datapump**
+**Configure sibylla-network-2/sibylla-datapump-websocket**
 
 ### Test the start and stop of the application
+
+iot start (or sibylla start)
 
 ### Next reading: Getting started
