@@ -224,7 +224,7 @@ Prepare the config file:
 
   # Where and how to store data.
   storage:
-    dbPath: <changeit: fullpath to Sibylla>/runtime/data/sibylla-db
+    dbPath: <changeit: fullpath to Sibylla>/3rd-party/mongodb-domain/runtime/data/sibylla-db
     journal:
       enabled: true
   #  engine:
@@ -235,12 +235,12 @@ Prepare the config file:
   systemLog:
     destination: file
     logAppend: true
-    path: <changeit: fullpath to Sibylla>/runtime/logs/sibylla-mongodb.log
+    path: <changeit: fullpath to Sibylla>/3rd-party/mongodb-domain/runtime/logs/sibylla-mongodb.log
 
   # network interfaces
   net:
     port: 27017
-    bindIp: <changeit: hostname (use localhost whenever possible)>
+    bindIp: <changeit: IP (use 0.0.0.0 to allow remote connections)>
 
   # replication:
   #   replSetName: "rs0"
@@ -248,7 +248,7 @@ Prepare the config file:
   # how the process runs
   processManagement:
     timeZoneInfo: /usr/share/zoneinfo
-    pidFilePath: <changeit: fullpath to Sibylla>/runtime/pids/sibylla-mongodb.pid
+    pidFilePath: <changeit: fullpath to Sibylla>/3rd-party/mongodb-domain/runtime/pids/sibylla-mongodb.pid
 
   # sharding:
   #   clusterRole: shardsvr
