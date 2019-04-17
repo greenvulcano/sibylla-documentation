@@ -117,7 +117,7 @@ Download the packages into this directory: $SIBYLLA_HOME/downloads
 - ActiveMQ
   - [ActiveMQ](http://activemq.apache.org/download.html)
     - Unix/Linux/Cygwin Distribution
-      - [apache-activemq-5.15.8-bin.tar.gz](http://www.apache.org/dyn/closer.cgi?filename=/activemq/5.15.8/apache-activemq-5.15.8-bin.tar.gz&action=download)
+      - [apache-activemq-5.15.9-bin.tar.gz](http://it.apache.contactlab.it//activemq/5.15.9/apache-activemq-5.15.9-bin.tar.gz)
 - EMQTT
   - [EMQTT](https://www.emqx.io/downloads/emq/broker)
     - Linux - 3.1* - Ubuntu 18.04 - Zip
@@ -205,6 +205,7 @@ Prepare the directory stucture:
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/config
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/runtime
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/runtime/data
+- mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/runtime/data/sibylla-db
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/runtime/logs
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/runtime/pids
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/scripts
