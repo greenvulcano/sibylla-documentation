@@ -143,7 +143,7 @@ Prepare the directory stucture for MySQL:
 
 Untar mysql into the sibylla/3rd-party/db-domain/bin directory:
 - cd $SIBYLLA_HOME/3rd-party/db-domain/bin
-- tar xzvf $SIBYLLA_HOME/downloads/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz
+- tar -xJvf $SIBYLLA_HOME/downloads/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz
 - ln -s mysql-8.0.15-linux-glibc2.12-x86_64 mysql
 
 Initialize the DB:
@@ -159,9 +159,6 @@ Initialize the DB:
   log-error = "<changeit: fullpath to Sibylla>/3rd-party/db-domain/logs/mysql.log"
 
   port = "3306"
-
-  socket = <changeit: fullpath to Sibylla>/3rd-party/db-domain/tmp/mysql_sibylla.socket
-  pid-file = <changeit: fullpath to Sibylla>/3rd-party/db-domain/tmp/mysql_sibylla.pid
   
   # Other parameters can be added here
   ```
