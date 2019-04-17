@@ -113,7 +113,7 @@ Download the packages into this directory: $SIBYLLA_HOME/downloads
 - Kafka
   - [Kafka](https://kafka.apache.org/downloads)
     - 2.1.1 - Scala 2.12 - kafka_2.12-2.1.1.tgz (asc, sha512)
-      - [kafka_2.12-2.1.1.tgz](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.1.1/kafka_2.12-2.1.1.tgz)
+      - [kafka_2.12-2.1.1.tgz](http://it.apache.contactlab.it/kafka/2.1.1/kafka_2.12-2.1.1.tgz)
 - ActiveMQ
   - [ActiveMQ](http://activemq.apache.org/download.html)
     - Unix/Linux/Cygwin Distribution
