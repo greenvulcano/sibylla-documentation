@@ -27,15 +27,24 @@ At this stage data are generally stored into BigData infrastructure and ready fo
 
 # Business value
 
-It is at this last step that the business value is added:
+It is in the last step within the platform that the business value is added:
 
-- Alarms
+- Alarms (static and dynamic)
+  - If a temperature raises over a specified limit (ex. 0.5 degrees)
+  - If an inclination goes over a specified limit (ex. 0.5 degrees)
+  - If a vibration persists for a long period of time (peak on the 500 Heartz)
+  - and many others
 - Reports
+  - The huge amount of data that may come from a network of sensors, can be represented and summarized into a report
+    that can be send to the end user
 - Prediction
+  - "tomorrow it will not rain" :-) What about if we can do the same on the data coming from the sensors
+    - The FAN#21 will propably stop working in 150 hours. Sibylla suggest a human inspection
+    - The inclication of the Pylon#03 is incrising at a rate of 0.02 degree every week
 - Automatic actions
 - BlockChain certifications of the data transmitted: Source, destination and reports
 
-# Features of the modules
+# Features of each module of the platform
 
 The **Sibylla IoT Platform** has been designed to solve many IoT needs. These is a list of its features:
 
