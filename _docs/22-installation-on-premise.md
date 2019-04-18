@@ -344,10 +344,10 @@ Broker.id and directory names when running on multiple nodes:
 **ActiveMQ**
 
 Prepare the directory stucture:
-- mkdir $SIBYLLA_HOME/3rd-party/jms-domain/jms-main
-- cd $SIBYLLA_HOME/3rd-party/jms-domain/jms-main
-- tar xvzf $SIBYLLA_HOME/downloads/apache-activemq-5.15.8-bin.tar.gz
-- ln -s apache-activemq-5.15.8 activemq
+- mkdir $SIBYLLA_HOME/3rd-party/jms-domain
+- cd $SIBYLLA_HOME/3rd-party/jms-domain
+- tar xvzf $SIBYLLA_HOME/downloads/apache-activemq-5.15.9-bin.tar.gz
+- ln -s apache-activemq-5.15.9 activemq
 
 - Remove the transportConnector with name="amqp"
   - cd activemq/conf
