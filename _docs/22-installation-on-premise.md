@@ -275,10 +275,10 @@ Start/stop MongoDB:
 **Kafka**
 
 Prepare the directory stucture for the new broker:
-- mkdir $SIBYLLA_HOME/3rd-party/sibylla-kafka-a
-- mkdir $SIBYLLA_HOME/3rd-party/sibylla-kafka-a/runtime
-- mkdir $SIBYLLA_HOME/3rd-party/sibylla-kafka-a/runtime/log.dirs
-- mkdir $SIBYLLA_HOME/3rd-party/sibylla-kafka-a/runtime/dataDir
+- mkdir $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-a
+- mkdir $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-a/runtime
+- mkdir $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-a/runtime/log.dirs
+- mkdir $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-a/runtime/dataDir
 
 NOTE: Naming convention for broker.id and directory names when running on multiple nodes:
 - Machine 1
