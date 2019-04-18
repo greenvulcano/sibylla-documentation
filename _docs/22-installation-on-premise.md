@@ -113,11 +113,11 @@ Download the packages into this directory: $SIBYLLA_HOME/downloads
 - Kafka
   - [Kafka](https://kafka.apache.org/downloads)
     - 2.1.1 - Scala 2.12 - kafka_2.12-2.1.1.tgz (asc, sha512)
-      - [kafka_2.12-2.1.1.tgz](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.1.1/kafka_2.12-2.1.1.tgz)
+      - [kafka_2.12-2.1.1.tgz](http://it.apache.contactlab.it/kafka/2.1.1/kafka_2.12-2.1.1.tgz)
 - ActiveMQ
   - [ActiveMQ](http://activemq.apache.org/download.html)
     - Unix/Linux/Cygwin Distribution
-      - [apache-activemq-5.15.8-bin.tar.gz](http://www.apache.org/dyn/closer.cgi?filename=/activemq/5.15.8/apache-activemq-5.15.8-bin.tar.gz&action=download)
+      - [apache-activemq-5.15.9-bin.tar.gz](http://it.apache.contactlab.it//activemq/5.15.9/apache-activemq-5.15.9-bin.tar.gz)
 - EMQTT
   - [EMQTT](https://www.emqx.io/downloads/emq/broker)
     - Linux - 3.1* - Ubuntu 18.04 - Zip
@@ -143,7 +143,7 @@ Prepare the directory stucture for MySQL:
 
 Untar mysql into the sibylla/3rd-party/db-domain/bin directory:
 - cd $SIBYLLA_HOME/3rd-party/db-domain/bin
-- tar xzvf $SIBYLLA_HOME/downloads/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz
+- tar -xJvf $SIBYLLA_HOME/downloads/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz
 - ln -s mysql-8.0.15-linux-glibc2.12-x86_64 mysql
 
 Initialize the DB:
@@ -159,9 +159,6 @@ Initialize the DB:
   log-error = "<changeit: fullpath to Sibylla>/3rd-party/db-domain/logs/mysql.log"
 
   port = "3306"
-
-  socket = <changeit: fullpath to Sibylla>/3rd-party/db-domain/tmp/mysql_sibylla.socket
-  pid-file = <changeit: fullpath to Sibylla>/3rd-party/db-domain/tmp/mysql_sibylla.pid
   
   # Other parameters can be added here
   ```
@@ -208,6 +205,7 @@ Prepare the directory stucture:
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/config
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/runtime
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/runtime/data
+- mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/runtime/data/sibylla-db
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/runtime/logs
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/runtime/pids
 - mkdir $SIBYLLA_HOME/3rd-party/mongodb-domain/scripts
@@ -227,7 +225,7 @@ Prepare the config file:
 
   # Where and how to store data.
   storage:
-    dbPath: <changeit: fullpath to Sibylla>/runtime/data/sibylla-db
+    dbPath: <changeit: fullpath to Sibylla>/3rd-party/mongodb-domain/runtime/data/sibylla-db
     journal:
       enabled: true
   #  engine:
@@ -238,12 +236,12 @@ Prepare the config file:
   systemLog:
     destination: file
     logAppend: true
-    path: <changeit: fullpath to Sibylla>/runtime/logs/sibylla-mongodb.log
+    path: <changeit: fullpath to Sibylla>/3rd-party/mongodb-domain/runtime/logs/sibylla-mongodb.log
 
   # network interfaces
   net:
     port: 27017
-    bindIp: <changeit: hostname (use localhost whenever possible)>
+    bindIp: <changeit: IP (use 0.0.0.0 to allow remote connections)>
 
   # replication:
   #   replSetName: "rs0"
@@ -251,7 +249,7 @@ Prepare the config file:
   # how the process runs
   processManagement:
     timeZoneInfo: /usr/share/zoneinfo
-    pidFilePath: <changeit: fullpath to Sibylla>/runtime/pids/sibylla-mongodb.pid
+    pidFilePath: <changeit: fullpath to Sibylla>/3rd-party/mongodb-domain/runtime/pids/sibylla-mongodb.pid
 
   # sharding:
   #   clusterRole: shardsvr
@@ -277,12 +275,51 @@ Start/stop MongoDB:
 **Kafka**
 
 Prepare the directory stucture for the new broker:
-- mkdir $SIBYLLA_HOME/3rd-party/sibylla-kafka-a
-- mkdir $SIBYLLA_HOME/3rd-party/sibylla-kafka-a/runtime
-- mkdir $SIBYLLA_HOME/3rd-party/sibylla-kafka-a/runtime/log.dirs
-- mkdir $SIBYLLA_HOME/3rd-party/sibylla-kafka-a/runtime/dataDir
+- mkdir $SIBYLLA_HOME/3rd-party/kafka-domain/
+- mkdir $SIBYLLA_HOME/3rd-party/kafka-domain/runtime
+- mkdir $SIBYLLA_HOME/3rd-party/kafka-domain/runtime/kafka-logs
+- mkdir $SIBYLLA_HOME/3rd-party/kafka-domain/runtime/zookeeper
 
-NOTE: Naming convention for broker.id and directory names when running on multiple nodes:
+Untar the product:
+- cd $SIBYLLA_HOME/3rd-party/kafka-domain/
+- tar xzvf $SIBYLLA_HOME/downloads/kafka_2.12-2.1.1.tgz
+- ln -s kafka_2.12-2.1.1 kafka
+
+Configure Kafka:
+- cd kafka/config
+- vi server.properties
+  ```
+  Uncomment and set the following rows:
+  listeners=PLAINTEXT://0.0.0.0:9092
+  […]
+  advertised.listeners=PLAINTEXT://<host>:9092
+  […]
+  # The maximum size for a message handled by the broker
+  replica.fetch.max.bytes=5242880
+  message.max.bytes=5242880
+  […]
+  log.dirs=<changeit: fullpath to Sibylla>/3rd-party/kafka-domain/runtime/kafka-logs
+  […]
+  num.partitions=12
+  […]
+  zookeeper.connect=changeit: hostname (use localhost whenever possible)>:2181
+  Close and save.
+  ```
+- vi zookeeper.properties
+  ```
+  Uncomment and set the following rows:
+  dataDir=<changeit: fullpath to Sibylla>/3rd-party/kafka-domain/runtime/zookeeper
+  […]
+  advertised.listeners=PLAINTEXT://<changeit: hostname (use localhost whenever possible)>:9092
+  Close and save.
+  ```
+
+NOTE: You can use a smart naming convention for directories to support multiple broker on single machine, 
+- $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-a
+- $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-b
+- $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-c
+
+Broker.id and directory names when running on multiple nodes:
 - Machine 1
   - Vertical scalability
     - sibylla-kafka-a - broker.id = 10
@@ -304,55 +341,13 @@ NOTE: Naming convention for broker.id and directory names when running on multip
     - sibylla-kafka-b - broker.id = <n>1 (example for machine 120 - broker.id = 1201)
     - sibylla-kafka-c - broker.id = <n>2 (example for machine 120 - broker.id = 1202)
 
-Note: This name convention that can scale up to a very large number of brokers
-
-Untar the product:
-- cd $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-a
-- tar xzvf $SIBYLLA_HOME/downloads/kafka_2.12-2.1.1.tgz
-- ln -s kafka_2.12-2.1.1 kafka
-
-Configure Kafka:
-- cd kafka/config
-- vi server.properties
-  ```
-  Uncomment and set the following rows:
-  listeners=PLAINTEXT://0.0.0.0:9092
-  […]
-  advertised.listeners=PLAINTEXT://<host>:9092
-  […]
-  # The maximum size for a message handled by the broker
-  replica.fetch.max.bytes=5242880
-  message.max.bytes=5242880
-  […]
-  log.dirs=<changeit: fullpath to Sibylla>/gviot-kafka-<changeit: node_id>/runtime/log.dirs
-  […]
-  num.partitions=12
-  […]
-  zookeeper.connect=changeit: hostname (use localhost whenever possible)>:2181
-  Close and save.
-  ```
-- vi groups.properties (TBV: A che serve?)
-  ```
-  Add the following line to the end
-  devices=gv
-  Close and save.
-  ```
-- vi zookeeper.properties
-  ```
-  Uncomment and set the following rows:
-  dataDir=<changeit: fullpath to Sibylla>/gviot-kafka-<changeit: node_id>/runtime/dataDir
-  […]
-  advertised.listeners=PLAINTEXT://<changeit: hostname (use localhost whenever possible)>:9092
-  Close and save.
-  ```
-
 **ActiveMQ**
 
 Prepare the directory stucture:
-- mkdir $SIBYLLA_HOME/3rd-party/jms-domain/jms-main
-- cd $SIBYLLA_HOME/3rd-party/jms-domain/jms-main
-- tar xvzf $SIBYLLA_HOME/downloads/apache-activemq-5.15.8-bin.tar.gz
-- ln -s apache-activemq-5.15.8 activemq
+- mkdir $SIBYLLA_HOME/3rd-party/jms-domain
+- cd $SIBYLLA_HOME/3rd-party/jms-domain
+- tar xvzf $SIBYLLA_HOME/downloads/apache-activemq-5.15.9-bin.tar.gz
+- ln -s apache-activemq-5.15.9 activemq
 
 - Remove the transportConnector with name="amqp"
   - cd activemq/conf
