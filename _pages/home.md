@@ -52,7 +52,8 @@ feature_row_2:
   - image_path: /assets/images/sibylla-feature-f.png
     alt: "Data certification"
     title: "Data certification"
-    excerpt: "Data home/data_certification/"
+    excerpt: "Data certification/"
+    url: "/docs/home/data_certification/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
 
