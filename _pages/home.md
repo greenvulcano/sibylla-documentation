@@ -16,7 +16,7 @@ feature_row:
   - image_path: /assets/images/sibylla-feature-a.png
     alt: "Collect and store data"
     title: "Collect and store data"
-    excerpt: "Data from sensors can be stored on the edge, depending on the acquisition frequency, in raw format"
+    excerpt: "All data coming from sensors or elaborated by the platform can be stored in a durable and safe place"
     url: "/docs/home/collect_and_store_data"
     btn_class: "btn--primary"
     btn_label: "Learn more"
@@ -60,5 +60,4 @@ feature_row_2:
 ---
 
 {% include feature_row id="feature_row" %}
-
 {% include feature_row id="feature_row_2" %}
