@@ -14,16 +14,16 @@ excerpt: >
     advantages of streamlined integration as well as preventative and predictive maintenance.
 feature_row:
   - image_path: /assets/images/sibylla-feature-a.png
-    alt: "Collect and store data1"
-    title: "Collect and store data2"
-    excerpt: "Collect and store data3"
+    alt: "Collect and store data"
+    title: "Collect and store data"
+    excerpt: "Data from sensors can be stored on the edge, depending on the acquisition frequency, in raw format"
     url: "/docs/home/collect_and_store_data"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/sibylla-feature-b.png
     alt: "Alarms"
     title: "Alarms"
-    excerpt: "Alarms"
+    excerpt: "Alarms cat be set on the data coming from sensors to advise the client of a warning condition"
     url: "/docs/home/alarms/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
