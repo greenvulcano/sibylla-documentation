@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/sibylla-home-header-background-2.jpg
+  overlay_image: /assets/images/sibylla-home-header-background-3.jpg
   actions:
     - label: "<i class='fas fa-download'></i> Install now"
       url: "/docs/quick-start-guide/"
@@ -34,7 +34,7 @@ feature_row:
     url: "/docs/quick-start-guide/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-feature_row:
+feature_row_2:
   - image_path: /assets/images/sibylla-feature-a.png
     alt: "sibylla-feature-a"
     title: "sibylla-feature-a"
@@ -59,4 +59,6 @@ feature_row:
 
 ---
 
-{% include feature_row %}
+{% include feature_row id="feature_row" %}
+
+{% include feature_row id="feature_row_2" %}
