@@ -14,46 +14,45 @@ excerpt: >
     advantages of streamlined integration as well as preventative and predictive maintenance.
 feature_row:
   - image_path: /assets/images/sibylla-feature-a.png
-    alt: "sibylla-feature-a"
-    title: "sibylla-feature-a"
-    excerpt: "sibylla-feature-a ..."
-    url: "/docs/quick-start-guide/"
+    alt: "Collect and store data1"
+    title: "Collect and store data2"
+    excerpt: "Collect and store data3"
+    url: "/docs/home/collect_and_store_data"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/sibylla-feature-b.png
-    alt: "sibylla-feature-b"
-    title: "sibylla-feature-b"
-    excerpt: "sibylla-feature-b ..."
-    url: "/docs/quick-start-guide/"
+    alt: "Alarms"
+    title: "Alarms"
+    excerpt: "Alarms"
+    url: "/docs/home/alarms/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/sibylla-feature-c.png
-    alt: "sibylla-feature-c"
-    title: "sibylla-feature-c"
-    excerpt: "sibylla-feature-c ..."
-    url: "/docs/quick-start-guide/"
+    alt: "Analytics and reports"
+    title: "Analytics and reports"
+    excerpt: "Analytics and reports"
+    url: "/docs/home/analytics_and_reports/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
 feature_row_2:
-  - image_path: /assets/images/sibylla-feature-a.png
-    alt: "sibylla-feature-a"
-    title: "sibylla-feature-a"
-    excerpt: "sibylla-feature-a ..."
-    url: "/docs/quick-start-guide/"
+  - image_path: /assets/images/sibylla-feature-d.png
+    alt: "Predict"
+    title: "Predict"
+    excerpt: "Predict"
+    url: "/docs/home/predict/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/sibylla-feature-b.png
-    alt: "sibylla-feature-b"
-    title: "sibylla-feature-b"
-    excerpt: "sibylla-feature-b ..."
-    url: "/docs/quick-start-guide/"
+  - image_path: /assets/images/sibylla-feature-e.png
+    alt: "Automatic actions"
+    title: "Automatic actions"
+    excerpt: "Automatic actions ..."
+    url: "/docs/home/automatic_actions/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/sibylla-feature-c.png
-    alt: "sibylla-feature-c"
-    title: "sibylla-feature-c"
-    excerpt: "sibylla-feature-c ..."
-    url: "/docs/quick-start-guide/"
+  - image_path: /assets/images/sibylla-feature-f.png
+    alt: "Data certification"
+    title: "Data certification"
+    excerpt: "Data home/data_certification/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
 
