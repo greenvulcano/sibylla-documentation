@@ -51,8 +51,8 @@ feature_row_2:
     btn_label: "Learn more"
   - image_path: /assets/images/sibylla-feature-f.png
     alt: "Data certification"
-    title: "Data collected by Sibylla are certified using backchain technology"
-    excerpt: "Collect/"
+    title: "Data certification"
+    excerpt: "Data collected by Sibylla are certified using backchain technology"
     url: "/docs/home/data-certification/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
