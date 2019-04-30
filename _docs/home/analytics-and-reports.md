@@ -6,4 +6,4 @@ toc: true
 
 # Analytics and reports
 
-...
+![priority plus masthead animation]({{ "/assets/images/analytics-and-reports.png" | relative_url }})

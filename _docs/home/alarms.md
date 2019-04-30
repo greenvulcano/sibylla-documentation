@@ -6,4 +6,4 @@ toc: true
 
 # Alarms
 
-...
+![priority plus masthead animation]({{ "/assets/images/alarms.png" | relative_url }})
