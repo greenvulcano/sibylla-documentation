@@ -1,7 +1,7 @@
 ---
 title: ""
 permalink: /docs/home/alarms/
-toc: true
+toc: false
 ---
 
 # Alarms

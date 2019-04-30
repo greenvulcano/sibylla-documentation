@@ -1,7 +1,7 @@
 ---
 title: ""
 permalink: /docs/home/collect-and-store-data/
-toc: true
+toc: false
 ---
 
 # Collect and store data

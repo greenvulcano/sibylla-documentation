@@ -1,7 +1,7 @@
 ---
 title: ""
 permalink: /docs/home/automatic-actions/
-toc: true
+toc: false
 ---
 
 # Automatic actions

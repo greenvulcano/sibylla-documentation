@@ -1,7 +1,7 @@
 ---
 title: ""
 permalink: /docs/home/data-certification/
-toc: true
+toc: false
 ---
 
 # Data certification

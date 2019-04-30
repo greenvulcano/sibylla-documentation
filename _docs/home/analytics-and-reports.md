@@ -1,7 +1,7 @@
 ---
 title: ""
 permalink: /docs/home/analytics-and-reports/
-toc: true
+toc: false
 ---
 
 # Analytics and reports
