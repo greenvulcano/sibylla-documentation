@@ -17,7 +17,7 @@ feature_row:
     alt: "Collect and store data"
     title: "Collect and store data"
     excerpt: "All data coming from sensors or elaborated by the platform can be stored in a durable and safe place"
-    url: "/docs/home/collect_and_store_data"
+    url: "/docs/home/collect-and-store-data"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/sibylla-feature-b.png
