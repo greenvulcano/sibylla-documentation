@@ -8,7 +8,7 @@ header:
     - label: "<i class='fas fa-download'></i> Install now"
       url: "/docs/quick-start-guide/"
 excerpt: >
-    Sibyl is a ready-to-use cloud service for the remote management and control of complex
+    Sibylla is a ready-to-use cloud service for the remote management and control of complex
     infrastructure systems. By collecting, monitoring and interpreting agnostic data from
     sensors linked to industrial equipment, clients benefit from the operational and economic
     advantages of streamlined integration as well as preventative and predictive maintenance.
@@ -30,30 +30,30 @@ feature_row:
   - image_path: /assets/images/sibylla-feature-c.png
     alt: "Analytics and reports"
     title: "Analytics and reports"
-    excerpt: "Analytics and reports"
-    url: "/docs/home/analytics_and_reports/"
+    excerpt: "Analyzing the huge amount of data coming from the sensors requires very specific analysis techniques that are addressed by Sibyl's analysis modules "
+    url: "/docs/home/analytics-and-reports/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
 feature_row_2:
   - image_path: /assets/images/sibylla-feature-d.png
     alt: "Predict"
     title: "Predict"
-    excerpt: "Predict"
+    excerpt: "Predictive analytics encompasses a variety of statistical techniques from data mining, predictive modelling, and machine learning, that analyze current and historical facts to make predictions about future or otherwise unknown events"
     url: "/docs/home/predict/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/sibylla-feature-e.png
     alt: "Automatic actions"
     title: "Automatic actions"
-    excerpt: "Automatic actions ..."
-    url: "/docs/home/automatic_actions/"
+    excerpt: "Sibylla not only has the ability to collect data from sensors, it can also interact with objects to, for example, shutdown devices, open doors and other "
+    url: "/docs/home/automatic-actions/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/images/sibylla-feature-f.png
     alt: "Data certification"
-    title: "Data certification"
-    excerpt: "Data certification/"
-    url: "/docs/home/data_certification/"
+    title: "Data collected by Sibylla are certified using backchain technology"
+    excerpt: "Collect/"
+    url: "/docs/home/data-certification/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
 
