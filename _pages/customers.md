@@ -5,6 +5,8 @@ permalink: /customers/
 toc: false
 ---
 
-# Customers
+# Customers [Work in progress...]
 
-ciao
+I'm making myself beautiful for you,
+
+  Sibylla.
