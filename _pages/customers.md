@@ -5,9 +5,7 @@ permalink: /customers/
 toc: false
 ---
 
-# Customers 
-
-[Work in progress...]
+### Work in progress...
 
 I'm making myself beautiful for you,
 
