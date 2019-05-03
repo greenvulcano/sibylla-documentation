@@ -1,7 +1,7 @@
 ---
 title: "Installation - Cloud"
 author_profile: true
-permalink: /installation-cloud/
+permalink: /docs/installation-cloud/
 toc: false
 ---
 
