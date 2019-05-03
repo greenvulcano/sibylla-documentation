@@ -25,8 +25,6 @@ docs:
         url: /docs/www-when-to-use-it/
   - title: Installation
     children:
-      - title: "Quick start guide"
-        url: /docs/quick-start-guide/
       - title: "Deployment options"
         url: /docs/installation-deployment-options/
       - title: "On premise"
