@@ -1,5 +1,5 @@
 ---
-title: "Use Cases"
+title: "Use cases"
 author_profile: true
 permalink: /use-cases/
 toc: false
