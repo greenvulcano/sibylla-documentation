@@ -1,10 +1,8 @@
 ---
-title: ""
+title: "Deployment options"
 permalink: /docs/installation-deployment-options/
 toc: true
 ---
-
-# Deployment options
 
 Choose the other deployment options to best fit your needs.
 
