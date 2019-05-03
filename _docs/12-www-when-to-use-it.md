@@ -1,6 +1,5 @@
 ---
 title: "When to use it"
-author_profile: true
 permalink: /docs/www-when-to-use-it/
 toc: true
 ---
