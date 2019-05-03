@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Partners"
 author_profile: true
 permalink: /partners/
 toc: false
