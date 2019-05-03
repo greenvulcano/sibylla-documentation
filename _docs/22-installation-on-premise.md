@@ -1,10 +1,8 @@
 ---
-title: ""
+title: "Installation - On Premise"
 permalink: /docs/installation-on-premise/
 toc: true
 ---
-
-# Installation - On Premise
 
 ## Ubuntu 18.04 64 bit - Single machine (on premise)
 
