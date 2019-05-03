@@ -1,6 +1,5 @@
 ---
 title: "Why we built it"
-author_profile: true
 permalink: /docs/www-why-we-built-it/
 toc: true
 ---
