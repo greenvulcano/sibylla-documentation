@@ -1,10 +1,9 @@
 ---
-title: ""
+title: "Why we built it"
+author_profile: true
 permalink: /docs/www-why-we-built-it/
 toc: true
 ---
-
-# Why we built it
 
 Our experience in complex system integration over the last 18 years, that
 lately evolved in interfacing IoT devices for car sharing and fleets management
