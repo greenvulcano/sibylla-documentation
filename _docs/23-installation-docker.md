@@ -4,8 +4,6 @@ permalink: /docs/installation-docker/
 toc: true
 ---
 
-# Installation - Docker
-
 
 ## Work in progress...
 
