@@ -1,10 +1,19 @@
 ---
-title: ""
+title: "Getting started - Console overview"
 permalink: /docs/getting-started-console-overview/
 toc: true
 ---
 
-# Getting started - Console overview
+
+## Work in progress...
+
+
+I'm making myself beautiful for you,
+
+  Sibylla.
+
+
+<!---
 
 Example: ...
 
@@ -23,4 +32,6 @@ Example: ...
 ## 2.1
 
 Example: ...
+
+-->
 
