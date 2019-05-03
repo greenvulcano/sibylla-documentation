@@ -1,5 +1,6 @@
 ---
-title: ""
+title: "What is it"
+author_profile: true
 permalink: /docs/www-what-is-it/
 toc: true
 ---
