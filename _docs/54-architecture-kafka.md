@@ -1,5 +1,5 @@
 ---
-title: "Architecture - Kafka"
+title: "Architecture - Kafka: circulatory system"
 permalink: /docs/architecture-kafka/
 toc: true
 ---
