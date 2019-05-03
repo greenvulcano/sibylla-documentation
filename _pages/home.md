@@ -6,7 +6,7 @@ header:
   overlay_image: /assets/images/sibylla-home-header-background-2.jpg
   actions:
     - label: "<i class='fas fa-download'></i> Install now"
-      url: "/docs/quick-start-guide/"
+      url: "/docs/home/quick-start-guide/"
 excerpt: >
     Sibylla is a ready-to-use cloud service for the remote management and control of complex
     infrastructure systems. By collecting, monitoring and interpreting agnostic data from
