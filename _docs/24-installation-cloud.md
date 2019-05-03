@@ -2,7 +2,7 @@
 title: "Installation - Cloud"
 author_profile: true
 permalink: /docs/installation-cloud/
-toc: false
+toc: true
 ---
 
 
