@@ -1,10 +1,8 @@
 ---
-title: ""
+title: "Deep intro - Overview"
 permalink: /docs/deep-intro-overview/
 toc: true
 ---
-
-# Deep intro - Overview
 
 ## Intro
 
