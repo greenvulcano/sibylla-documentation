@@ -5,8 +5,6 @@ permalink: /docs/www-what-is-it/
 toc: true
 ---
 
-# What is it
-
 The **Sibylla IoT Platform** integrates IoT devices to enterprise or cloud systems.
 
 One of the most important missions of the **Sibylla IoT Platform** is to make objects speak, with a strong orientation towards infrastructures such as bridges, tunnels, construction sites, buildings, wind turbines and in general all infrastructures that need maintenance and monitoring.
