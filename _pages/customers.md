@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Customers"
 author_profile: true
 permalink: /customers/
 toc: false
