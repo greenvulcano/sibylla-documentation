@@ -1,5 +1,5 @@
 ---
-title: "Functionalities-actions"
+title: "Functionalities - actions"
 permalink: /docs/functionalities-actions/
 toc: true
 ---
