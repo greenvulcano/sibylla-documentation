@@ -58,9 +58,9 @@ docs:
       - title: "The gateway"
         url: /docs/architecture-gateway/
       - title: "Kafka: circulatory system"
-        url: /docs/architecture-gateway/
+        url: /docs/architecture-kafka/
       - title: "The datapumps"
-        url: /docs/architecture-gateway/
+        url: /docs/architecture-datapumps/
       - title: "Business modules"
         url: /docs/architecture-business-modules/
   - title: Edge gateways
