@@ -1,10 +1,9 @@
 ---
-title: ""
+title: "When to use it"
+author_profile: true
 permalink: /docs/www-when-to-use-it/
 toc: true
 ---
-
-# When to use it
 
 There are many reasons why it is important to have a well designed IoT platform for your projects.
 
