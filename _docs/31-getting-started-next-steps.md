@@ -1,10 +1,21 @@
 ---
-title: ""
+title: "Getting started - Next steps"
 permalink: /docs/getting-started-next-steps/
 toc: true
 ---
 
-# Getting started - Next steps
+
+## Work in progress...
+
+
+I'm making myself beautiful for you,
+
+  Sibylla.
+
+
+<!---
+
+# 
 
 Example: ...
 
@@ -24,3 +35,4 @@ Example: ...
 
 Example: ...
 
+-->
