@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Edge gateways - FS22 Industrial BraggMETER"
 permalink: /docs/edge-gateways-fs22-industrial-braggmeter/
 toc: true
 ---
