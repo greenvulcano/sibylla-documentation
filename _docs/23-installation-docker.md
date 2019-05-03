@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Installation - Docker"
 permalink: /docs/installation-docker/
 toc: true
 ---
