@@ -157,7 +157,7 @@ Initialize the DB:
   log-error = "<changeit: fullpath to Sibylla>/3rd-party/db-domain/logs/mysql.log"
 
   port = "3306"
-  
+
   # Other parameters can be added here
   ```
 - `bin/mysql/bin/mysqld --defaults-file=./config/sibylla.cnf --initialize`
@@ -312,7 +312,7 @@ Configure Kafka:
   Close and save.
   ```
 
-NOTE: You can use a smart naming convention for directories to support multiple broker on single machine, 
+NOTE: You can use a smart naming convention for directories to support multiple broker on single machine,
 - $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-a
 - $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-b
 - $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-c
@@ -433,12 +433,19 @@ Modify the content of the file to reflect your environment:
     n-1-datapump-websocket   1           localhost
 
 **Configure core**
+
 **Configure console**
+
 **Configure sibylla-network-1/sibylla-gateway**
+
 **Configure sibylla-network-1/sibylla-datapump**
+
 **Configure sibylla-network-1/sibylla-datapump-websocket**
+
 **Configure sibylla-network-2/sibylla-gateway**
+
 **Configure sibylla-network-2/sibylla-datapump**
+
 **Configure sibylla-network-2/sibylla-datapump-websocket**
 
 ### Test the start and stop of the application
