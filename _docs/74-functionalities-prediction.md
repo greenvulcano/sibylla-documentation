@@ -12,3 +12,5 @@ I'm making myself beautiful for you,
 
   Sibylla.
 
+
+![priority plus masthead animation]({{ "/assets/images/predict.png" | relative_url }})

@@ -12,3 +12,6 @@ I'm making myself beautiful for you,
 
   Sibylla.
 
+
+
+![priority plus masthead animation]({{ "/assets/images/analytics-and-reports.png" | relative_url }})
