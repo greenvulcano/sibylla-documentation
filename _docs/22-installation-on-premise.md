@@ -81,7 +81,8 @@ Load the sibylla environment at login:
 
 ### Console - BackEnd installation & setup
 
-In order to install the WebApp's backend service run the following commands:
+In order to install the WebApp's backend service, move into `sibylla/sibylla-console`, [download the console](TODO) and unzip the file. 
+Than you have to run the following commands:
 
 - `cd backend`
 - `npm install --save`
