@@ -22,7 +22,7 @@ To install sibylla on your system you need to install:
 - A user sibylla (group sibylla)
 - Utilities: vi, wget, ...
 
-###Download the sibylla installation package (community edition)
+### Download the sibylla installation package (community edition)
 
 Login into the machine as user: sibylla (group sibylla).
 
