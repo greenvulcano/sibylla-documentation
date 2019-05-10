@@ -155,6 +155,7 @@ To configurate the frotned console run the following commands:
 - `cd frontend/dist/webapp/assets`
 - `nano/vi/vim appConfig.json`
 - Set your endpoints:
+
 ```
     {
     "production": true,
@@ -172,9 +173,11 @@ To configurate the frotned console run the following commands:
 }
 
 ```
+
 - `cp appConfig.json data/`
 
 After all add these following instuction in your Nginx's configuration and restart it:
+
 ```
     server {
          listen 8080;
@@ -198,6 +201,7 @@ To configurate the frotned console run the following commands:
 - `touch appConfig.json`
 - `nano/vi/vim appConfig.json`
 - Copy/paste the following configuration:
+
 ```
     {
     "production": false,
@@ -215,6 +219,7 @@ To configurate the frotned console run the following commands:
 }
 
 ```
+
 - `cp appConfig.json data/`
 - `cd ../../`
 - `npm install --save`
