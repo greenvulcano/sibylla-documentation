@@ -67,9 +67,9 @@ Networks:
 ### Set the environment
 
 Modify the sibylla/scripts/set-environment.source-me to meet your environment:
-- vi sibylla/scripts/set-environment.source-me
-  - Change this ENV variable
-    - export SIBYL_HOME=<The directory where sibylla has been installed>
+- `vi sibylla/scripts/set-environment.source-me`
+- Change this ENV variable
+- `export SIBYL_HOME=<The directory where sibylla has been installed>`
 
 Load the sibylla environment at login:
 - vi .bashrc (or equivalent)
@@ -102,38 +102,13 @@ Create the 3rd parties directory structure:
 Download the packages into this directory: $SIBYLLA_HOME/downloads
 
 Package | Version | Download at
+--------|---------|------------
 [MySQL](https://dev.mysql.com/downloads/mysql) | 8.0 - Linux generic - 64 bits | [mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz](https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz)
 [Mongo](https://www.mongodb.com/download-center/community)| 4.0.6 - Ubuntu 18.04 64 bits - tgz| [mongodb-linux-x86_64-ubuntu1804-4.0.6.tgz](https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1804-4.0.6.tgz)
 [Kafka](https://kafka.apache.org/downloads)| 2.1.1 - Scala 2.12 - kafka_2.12-2.1.1.tgz (asc, sha512)| [kafka_2.12-2.1.1.tgz](http://it.apache.contactlab.it/kafka/2.1.1/kafka_2.12-2.1.1.tgz)
 [ActiveMQ](http://activemq.apache.org/download.html)| Unix/Linux/Cygwin Distribution| [apache-activemq-5.15.9-bin.tar.gz](http://it.apache.contactlab.it//activemq/5.15.9/apache-activemq-5.15.9-bin.tar.gz)
 [EMQTT](https://www.emqx.io/downloads/emq/broker)| Linux - 3.1* - Ubuntu 18.04 - Zip| [emqx-ubuntu18.04-v3.1-beta.2.zip](https://www.emqx.io/downloads/broker/v3.1-beta.2/emqx-ubuntu18.04-v3.1-beta.2.zip)
 [Metabase](https://www.metabase.com)| Custom install - v0.31.2| [metabase.jar](http://downloads.metabase.com/v0.31.2/metabase.jar)
-
-
-- Mysql
-  - [MySQL](https://dev.mysql.com/downloads/mysql)
-    - Linux generic - 64 bits
-      - [mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz](https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz)
-- Mongo
-  - [Mongo](https://www.mongodb.com/download-center/community)
-    - 4.0.6 - Ubuntu 18.04 64 bits - tgz
-      - [mongodb-linux-x86_64-ubuntu1804-4.0.6.tgz](https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1804-4.0.6.tgz)
-- Kafka
-  - [Kafka](https://kafka.apache.org/downloads)
-    - 2.1.1 - Scala 2.12 - kafka_2.12-2.1.1.tgz (asc, sha512)
-      - [kafka_2.12-2.1.1.tgz](http://it.apache.contactlab.it/kafka/2.1.1/kafka_2.12-2.1.1.tgz)
-- ActiveMQ
-  - [ActiveMQ](http://activemq.apache.org/download.html)
-    - Unix/Linux/Cygwin Distribution
-      - [apache-activemq-5.15.9-bin.tar.gz](http://it.apache.contactlab.it//activemq/5.15.9/apache-activemq-5.15.9-bin.tar.gz)
-- EMQTT
-  - [EMQTT](https://www.emqx.io/downloads/emq/broker)
-    - Linux - 3.1* - Ubuntu 18.04 - Zip
-      - [emqx-ubuntu18.04-v3.1-beta.2.zip](https://www.emqx.io/downloads/broker/v3.1-beta.2/emqx-ubuntu18.04-v3.1-beta.2.zip)
-- Metabase
-  - [Metabase](https://www.metabase.com)
-    - Custom install - v0.31.2
-      - [metabase.jar](http://downloads.metabase.com/v0.31.2/metabase.jar)
 
 ### Install third party software (portable option)
 
