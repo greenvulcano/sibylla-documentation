@@ -17,8 +17,8 @@ To install sibylla on your system you need at least:
 
 To install sibylla on your system you need to install:
 - JRE 11 (commercial or open)
-- node (TBD)
-- nginx (versione: TBD. As the entry point for the Sibylla platform: console, cores, gateways, ...)
+- node (*TBD*)
+- nginx (versione: *TBD*. As the entry point for the Sibylla platform: console, cores, gateways, ...)
 - A user sibylla (group sibylla)
 - Utilities: vi, wget, ...
 
@@ -29,7 +29,7 @@ Login into the machine as user: sibylla (group sibylla).
 Get the product from here and place in the parent directory you want sibylla to be installed:
 - cd <parent directory of the sibylla product> (Suggested: the home directory of the sibylla user)
 - wget https://github.com/green-vulcano/releases/download/sibylla/sibylla-1.0.tar
-  - TBD: il contenuto del file conterrà: sibylla + sottodirectories: scripts, core, console, n-1-...
+  - *TBD*: il contenuto del file conterrà: sibylla + sottodirectories: scripts, core, console, n-1-...
     - n-1: deve contenere, script start/stop, application, properties
 
 ### Prepare the directory structure
