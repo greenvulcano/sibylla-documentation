@@ -406,6 +406,7 @@ Configure Kafka:
 >    sibylla-kafka-a - broker.id = <n>0 (example for machine 120 - broker.id = 1200)
 >    sibylla-kafka-b - broker.id = <n>1 (example for machine 120 - broker.id = 1201)
 >    sibylla-kafka-c - broker.id = <n>2 (example for machine 120 - broker.id = 1202)
+>```
 
 **ActiveMQ**
 
