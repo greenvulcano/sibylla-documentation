@@ -35,3 +35,4 @@ Example: ...
 
 -->
 
+![priority plus masthead animation]({{ "/assets/images/getting-started/console-overview-1.png" | relative_url }})
