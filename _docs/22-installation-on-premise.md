@@ -353,7 +353,7 @@ Configure Kafka:
 
 `-$ vi server.properties`
 
-```
+  ```
   Uncomment and set the following rows:
   listeners=PLAINTEXT://0.0.0.0:9092
   […]
@@ -370,14 +370,17 @@ Configure Kafka:
   zookeeper.connect=changeit: hostname (use localhost whenever possible)>:2181
   Close and save.
   ```
-- vi zookeeper.properties
+
+`-$ vi zookeeper.properties`
+
   ```
   Uncomment and set the following rows:
   dataDir=<changeit: fullpath to Sibylla>/3rd-party/kafka-domain/runtime/zookeeper
   […]
   advertised.listeners=PLAINTEXT://<changeit: hostname (use localhost whenever possible)>:9092
   Close and save.
-```
+  ```
+
 
 > NOTE: You can use a smart naming convention for directories to support multiple broker on single machine,
 > ```
