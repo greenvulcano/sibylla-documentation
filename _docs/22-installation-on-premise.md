@@ -27,19 +27,24 @@ To install sibylla on your system you need to install:
 Login into the machine as user: sibylla (group sibylla).
 
 Get the product from here and place in the parent directory you want sibylla to be installed:
-- cd <parent directory of the sibylla product> (Suggested: the home directory of the sibylla user)
-- wget https://github.com/green-vulcano/releases/download/sibylla/sibylla-1.0.tar
-  - _TBD_: il contenuto del file conterrà: sibylla + sottodirectories: scripts, core, console, n-1-...
-    - n-1: deve contenere, script start/stop, application, properties
+
+`$ cd <parent directory of the sibylla product> (Suggested: the home directory of the sibylla user)`
+
+`$ wget https://github.com/green-vulcano/releases/download/sibylla/sibylla-1.0.tar`
+
+- _TBD: il contenuto del file conterrà: sibylla + sottodirectories: scripts, core, console, n-1-..._
+  - _n-1: deve contenere, script start/stop, application, properties_
 
 ### Prepare the directory structure
 
 Login into the machine as user: sibylla (group sibylla).
 
 From the parent directory where you want to install sibylla, untar the sibylla package:
-- tar xzvf sibylla-1.0.tar
 
-This command above creates a directories with this structure:
+`$ tar xzvf sibylla-1.0.tar`
+
+
+The command above creates a directory with the following structure:
 
 ```
 Project root:
@@ -59,25 +64,29 @@ Application:
 - sibylla/sibylla-core
 
 Networks:
-- mkdir sibylla/sibylla-network-1 (Generic JSON/HTTP)
-- mkdir sibylla/sibylla-network-2 (Generic JSON/MQTT)
+- sibylla/sibylla-network-1/sibylla-gateway-http (Generic JSON/HTTP)
+- sibylla/sibylla-network-1/sibylla-gateway-mqtt (Generic JSON/MQTT)
 - ... other networks will be installed separately
 ```
 
 ### Set the environment
 
 Modify the sibylla/scripts/set-environment.source-me to meet your environment:
-- `vi sibylla/scripts/set-environment.source-me`
-- Change this ENV variable
-- `export SIBYL_HOME=<The directory where sibylla has been installed>`
+
+`$ vi sibylla/scripts/set-environment.source-me`
+Change this ENV variable
+
+`$ export SIBYL_HOME=<The directory where sibylla has been installed>`
 
 Load the sibylla environment at login:
-- vi .bashrc (or equivalent)
-  - add this line at the end of the script
-    - . <path to the sibylla directory>/scripts/set-environment.source-me
-- Try the new setting: logout and login
-  - NOTE: At this stage some aliases defined by the set-environment.source-me will not work because the installation
-          procedure is not complete yet
+
+`$ vi .bashrc (or equivalent)`
+add this line at the end of the script
+
+`$ . <path to the sibylla directory>/scripts/set-environment.source-me`
+Try the new setting: logout and login
+> NOTE: At this stage some aliases defined by the set-environment.source-me will not work because the installation
+>          procedure is not complete yet
 
 
 ### Download these third parties software (portable option)
