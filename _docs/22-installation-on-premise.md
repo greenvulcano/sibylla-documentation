@@ -79,149 +79,6 @@ Load the sibylla environment at login:
   - NOTE: At this stage some aliases defined by the set-environment.source-me will not work because the installation
           procedure is not complete yet
 
-### Console - BackEnd installation & setup
-
-In order to install the WebApp's backend service, move into `sibylla/sibylla-console`, [download the console](TODO) and unzip the file.
-Than you have to run the following commands:
-
-- `cd backend`
-- `npm install --save`
-- `cd lib`
-- `mkdir config`
-- `cd config`
-- `touch environment.ts`
-- `nano/vi/vim environment.ts`
-
-- Copy/paste the following configuration:
-
-```
-    export const environment = {
-        mongoUrl: "",
-        METABASE_SITE_URL: "",
-        METABASE_SECRET_KEY: "",
-        webGisFolderPath: "",
-        webGisWritePath: ""
-    };
-
-```
-
-`mongoUrl` syntaxis is divided in two methods:
-- One MongoDB instance: `mongodb://*MONGO_URL*/gv_iot_webapp`
-- Multiple MongoDB instance: `mongodb://*1_MONGO_URL*,*2_MONGO_URL*,.../gv_iot_webapp`
-
-(`webGisFolderPath` is the absolute path to a static folder on the machine, where you will save the KML files.
-`webGisWritePath` is the relative path inside the machine to the same folder.)
-
-Node's default port is `3000`, you can change it by modifying the server.js inside backend/dist/ folder.
-
-Return to `/backend`
-- `sudo npm run build`
-
-This will create a `dist` folder with the production-ready code of the backend application.
-
-- `sudo scp package.json dist`
-- `cd dist`
-- `sudo npm install`
-- `sudo npm run start server.js`
-
-(`CTRL + C` when you will see "Express server listening on port ####")
-
-Now you can either run the app with nohup (npm run prod), or by following the commands down here we will install forever.js, which helps us to keep track of our node services:
-
-- `cd`
-- `[sudo] npm install forever -g`
-- `[sudo] forever start backend/dist/server.js`
-
-
-You can check if everything is working correctly by typing:
-
-- `[sudo] forever list`
-
-- Copy the logfile path of your forever.js process retrieved by the above command
-
-- `cat ########.log`
-
-The installation is finished, your application will be hosted on `localhost:3000` or either the port you've specified in the `server.js` file.
-
-
-### Console - FrontEnd installation & setup
-
-There are two solution for installation & setup of FrontEnd Console:
-- Dist folder with static file and Nginx routing
-- Full source code with `npm start`
-
-### Dist folder with static file and Nginx routing
-To configurate the frotned console run the following commands:
-- `cd frontend/dist/webapp/assets`
-- `nano/vi/vim appConfig.json`
-- Set your endpoints:
-```
-    {
-    "production": true,
-    "apiUrl": "",
-    "nodeApiUrl": "",
-    "metabaseApiUrl": "",
-    "myRxStompConfig": {
-        "brokerURL": "",
-        "login": "",
-        "passcode": "",
-        "heartbeatIncoming": 0,
-        "heartbeatOutgoing": 20000,
-        "reconnectDelay": 200
-    }
-}
-
-```
-- `cp appConfig.json data/`
-
-After all add these following instuction in your Nginx's configuration and restart it:
-```
-    server {
-         listen 8080;
-
-   index index.html;
-
-   location /sibyllaconsole {
-       alias *path_of_webapp*/gviot-webapp/frontend/dist/webapp;
-   }
-
-   location /static {
-       alias *path_of_webapp*/static;
-   }
-}
-
-```
-
-#### Full source code with `npm start`
-To configurate the frotned console run the following commands:
-- `cd frontend/src/assets`
-- `touch appConfig.json`
-- `nano/vi/vim appConfig.json`
-- Copy/paste the following configuration:
-```
-    {
-    "production": false,
-    "apiUrl": "",
-    "nodeApiUrl": "",
-    "metabaseApiUrl": "",
-    "myRxStompConfig": {
-        "brokerURL": "",
-        "login": "",
-        "passcode": "",
-        "heartbeatIncoming": 0,
-        "heartbeatOutgoing": 20000,
-        "reconnectDelay": 200
-    }
-}
-
-```
-- `cp appConfig.json data/`
-- `cd ../../`
-- `npm install --save`
-- `npm start`
-
-The WebApp start at `4200` port.
-
 
 ### Download these third parties software (portable option)
 
@@ -554,6 +411,149 @@ Start/stop Metabase:
 - cd $SIBYLLA_HOME/3rd-party/analytics-domain/metabase
 - scripts/start.sh
 - scripts/stop.sh
+
+### Console - BackEnd installation & setup
+
+In order to install the WebApp's backend service, move into `sibylla/sibylla-console`, [download the console](TODO) and unzip the file.
+Than you have to run the following commands:
+
+- `cd backend`
+- `npm install --save`
+- `cd lib`
+- `mkdir config`
+- `cd config`
+- `touch environment.ts`
+- `nano/vi/vim environment.ts`
+
+- Copy/paste the following configuration:
+
+```
+    export const environment = {
+        mongoUrl: "",
+        METABASE_SITE_URL: "",
+        METABASE_SECRET_KEY: "",
+        webGisFolderPath: "",
+        webGisWritePath: ""
+    };
+
+```
+
+`mongoUrl` syntaxis is divided in two methods:
+- One MongoDB instance: `mongodb://*MONGO_URL*/gv_iot_webapp`
+- Multiple MongoDB instance: `mongodb://*1_MONGO_URL*,*2_MONGO_URL*,.../gv_iot_webapp`
+
+(`webGisFolderPath` is the absolute path to a static folder on the machine, where you will save the KML files.
+`webGisWritePath` is the relative path inside the machine to the same folder.)
+
+Node's default port is `3000`, you can change it by modifying the server.js inside backend/dist/ folder.
+
+Return to `/backend`
+- `sudo npm run build`
+
+This will create a `dist` folder with the production-ready code of the backend application.
+
+- `sudo scp package.json dist`
+- `cd dist`
+- `sudo npm install`
+- `sudo npm run start server.js`
+
+(`CTRL + C` when you will see "Express server listening on port ####")
+
+Now you can either run the app with nohup (npm run prod), or by following the commands down here we will install forever.js, which helps us to keep track of our node services:
+
+- `cd`
+- `[sudo] npm install forever -g`
+- `[sudo] forever start backend/dist/server.js`
+
+
+You can check if everything is working correctly by typing:
+
+- `[sudo] forever list`
+
+- Copy the logfile path of your forever.js process retrieved by the above command
+
+- `cat ########.log`
+
+The installation is finished, your application will be hosted on `localhost:3000` or either the port you've specified in the `server.js` file.
+
+
+### Console - FrontEnd installation & setup
+
+There are two solution for installation & setup of FrontEnd Console:
+- Dist folder with static file and Nginx routing
+- Full source code with `npm start`
+
+### Dist folder with static file and Nginx routing
+To configurate the frotned console run the following commands:
+- `cd frontend/dist/webapp/assets`
+- `nano/vi/vim appConfig.json`
+- Set your endpoints:
+```
+    {
+    "production": true,
+    "apiUrl": "",
+    "nodeApiUrl": "",
+    "metabaseApiUrl": "",
+    "myRxStompConfig": {
+        "brokerURL": "",
+        "login": "",
+        "passcode": "",
+        "heartbeatIncoming": 0,
+        "heartbeatOutgoing": 20000,
+        "reconnectDelay": 200
+    }
+}
+
+```
+- `cp appConfig.json data/`
+
+After all add these following instuction in your Nginx's configuration and restart it:
+```
+    server {
+         listen 8080;
+
+   index index.html;
+
+   location /sibyllaconsole {
+       alias *path_of_webapp*/gviot-webapp/frontend/dist/webapp;
+   }
+
+   location /static {
+       alias *path_of_webapp*/static;
+   }
+}
+
+```
+
+#### Full source code with `npm start`
+To configurate the frotned console run the following commands:
+- `cd frontend/src/assets`
+- `touch appConfig.json`
+- `nano/vi/vim appConfig.json`
+- Copy/paste the following configuration:
+```
+    {
+    "production": false,
+    "apiUrl": "",
+    "nodeApiUrl": "",
+    "metabaseApiUrl": "",
+    "myRxStompConfig": {
+        "brokerURL": "",
+        "login": "",
+        "passcode": "",
+        "heartbeatIncoming": 0,
+        "heartbeatOutgoing": 20000,
+        "reconnectDelay": 200
+    }
+}
+
+```
+- `cp appConfig.json data/`
+- `cd ../../`
+- `npm install --save`
+- `npm start`
+
+The WebApp start at `4200` port.
 
 
 ### Configure the application
