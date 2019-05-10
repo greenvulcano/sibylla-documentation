@@ -379,34 +379,34 @@ Configure Kafka:
   Close and save.
 ```
 
->NOTE: You can use a smart naming convention for directories to support multiple broker on single machine,
->```
->$SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-a
->$SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-b
->$SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-c
+> NOTE: You can use a smart naming convention for directories to support multiple broker on single machine,
+> ```
+> $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-a
+> $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-b
+> $SIBYLLA_HOME/3rd-party/kafka-domain/sibylla-kafka-c
 >
->Broker.id and directory names when running on multiple nodes:
->Machine 1
->  Vertical scalability
->    sibylla-kafka-a - broker.id = 10
->    sibylla-kafka-b - broker.id = 11
->    sibylla-kafka-c - broker.id = 12
->Machine 2
->  Vertical scalability
->    sibylla-kafka-a - broker.id = 20
->    sibylla-kafka-b - broker.id = 21
->    sibylla-kafka-c - broker.id = 22
->Machine ...
->  Vertical scalability
->    sibylla-kafka-a - broker.id = 30
->    sibylla-kafka-b - broker.id = 31
->    sibylla-kafka-c - broker.id = 32
->Machine n
->  Vertical scalability
->    sibylla-kafka-a - broker.id = <n>0 (example for machine 120 - broker.id = 1200)
->    sibylla-kafka-b - broker.id = <n>1 (example for machine 120 - broker.id = 1201)
->    sibylla-kafka-c - broker.id = <n>2 (example for machine 120 - broker.id = 1202)
->```
+> Broker.id and directory names when running on multiple nodes:
+> Machine 1
+>   Vertical scalability
+>     sibylla-kafka-a - broker.id = 10
+>     sibylla-kafka-b - broker.id = 11
+>     sibylla-kafka-c - broker.id = 12
+> Machine 2
+>   Vertical scalability
+>     sibylla-kafka-a - broker.id = 20
+>     sibylla-kafka-b - broker.id = 21
+>     sibylla-kafka-c - broker.id = 22
+> Machine ...
+>   Vertical scalability
+>     sibylla-kafka-a - broker.id = 30
+>     sibylla-kafka-b - broker.id = 31
+>     sibylla-kafka-c - broker.id = 32
+> Machine n
+>   Vertical scalability
+>     sibylla-kafka-a - broker.id = <n>0 (example for machine 120 - broker.id = 1200)
+>     sibylla-kafka-b - broker.id = <n>1 (example for machine 120 - broker.id = 1201)
+>     sibylla-kafka-c - broker.id = <n>2 (example for machine 120 - broker.id = 1202)
+> ```
 
 **ActiveMQ**
 
