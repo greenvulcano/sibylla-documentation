@@ -29,6 +29,8 @@ docs:
         url: /docs/installation-deployment-options/
       - title: "On premise"
         url: /docs/installation-on-premise/
+      - title: "On premise - console"
+        url: /docs/installation-on-premise-console/
       - title: "Docker"
         url: /docs/installation-docker/
       - title: "Cloud"
