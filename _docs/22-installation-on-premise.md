@@ -28,12 +28,12 @@ Login into the machine as user: sibylla (group sibylla).
 
 Get the product from here and place in the parent directory you want sibylla to be installed:
 
-`$ cd <parent directory of the sibylla product> (Suggested: the home directory of the sibylla user)`
+`-$ cd <parent directory of the sibylla product> (Suggested: the home directory of the sibylla user)`
 
-`$ wget https://github.com/green-vulcano/releases/download/sibylla/sibylla-1.0.tar`
+`-$ wget https://github.com/green-vulcano/releases/download/sibylla/sibylla-1.0.tar`
 
-- _TBD: il contenuto del file conterrà: sibylla + sottodirectories: scripts, core, console, n-1-..._
-  - _n-1: deve contenere, script start/stop, application, properties_
+> **TBD**: il contenuto del file conterrà: sibylla + sottodirectories: scripts, core, console, n-1-...
+> n-1: deve contenere, script start/stop, application, properties
 
 ### Prepare the directory structure
 
@@ -41,7 +41,7 @@ Login into the machine as user: sibylla (group sibylla).
 
 From the parent directory where you want to install sibylla, untar the sibylla package:
 
-`$ tar xzvf sibylla-1.0.tar`
+`-$ tar xzvf sibylla-1.0.tar`
 
 
 The command above creates a directory with the following structure:
@@ -73,17 +73,20 @@ Networks:
 
 Modify the sibylla/scripts/set-environment.source-me to meet your environment:
 
-`$ vi sibylla/scripts/set-environment.source-me`
+`-$ vi sibylla/scripts/set-environment.source-me`
+
 Change this ENV variable
 
-`$ export SIBYL_HOME=<The directory where sibylla has been installed>`
+`-$ export SIBYL_HOME=<The directory where sibylla has been installed>`
 
 Load the sibylla environment at login:
 
-`$ vi .bashrc (or equivalent)`
+`-$ vi .bashrc (or equivalent)`
+
 add this line at the end of the script
 
-`$ . <path to the sibylla directory>/scripts/set-environment.source-me`
+`-$ . <path to the sibylla directory>/scripts/set-environment.source-me`
+
 Try the new setting: logout and login
 > NOTE: At this stage some aliases defined by the set-environment.source-me will not work because the installation
 >          procedure is not complete yet
@@ -126,21 +129,25 @@ This part of the procedure will prepare and test all 3rd party software.
 **MySQL**
 
 Prepare the directory stucture for MySQL:
-- mkdir $SIBYLLA_HOME/3rd-party/db-domain/bin
-- mkdir $SIBYLLA_HOME/3rd-party/db-domain/data
-- mkdir $SIBYLLA_HOME/3rd-party/db-domain/config
-- mkdir $SIBYLLA_HOME/3rd-party/db-domain/scripts
-- mkdir $SIBYLLA_HOME/3rd-party/db-domain/logs
-- mkdir $SIBYLLA_HOME/3rd-party/db-domain/tmp
+```
+-$ mkdir $SIBYLLA_HOME/3rd-party/db-domain/bin
+-$  mkdir $SIBYLLA_HOME/3rd-party/db-domain/data
+-$  mkdir $SIBYLLA_HOME/3rd-party/db-domain/config
+-$  mkdir $SIBYLLA_HOME/3rd-party/db-domain/scripts
+-$  mkdir $SIBYLLA_HOME/3rd-party/db-domain/logs
+-$  mkdir $SIBYLLA_HOME/3rd-party/db-domain/tmp
+```
 
 Untar mysql into the sibylla/3rd-party/db-domain/bin directory:
-- cd $SIBYLLA_HOME/3rd-party/db-domain/bin
-- tar -xJvf $SIBYLLA_HOME/downloads/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz
-- ln -s mysql-8.0.15-linux-glibc2.12-x86_64 mysql
+```
+-$ cd $SIBYLLA_HOME/3rd-party/db-domain/bin
+-$ tar -xJvf $SIBYLLA_HOME/downloads/mysql-8.0.15-linux-glibc2.12-x86_64.tar.xz
+-$ ln -s mysql-8.0.15-linux-glibc2.12-x86_64 mysql
+```
 
 Initialize the DB:
 - In case of doubts follow the official procedure defined at:
-  - [MySQL docs](https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html]
+  - [MySQL docs](https://dev.mysql.com/doc/refman/8.0/en/binary-installation.html)
 - cd $SIBYLLA_HOME/3rd-party/db-domain
 - vi config/sibylla.cnf (or set any additional database options you prefer)
   ```
