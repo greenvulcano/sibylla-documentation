@@ -414,37 +414,44 @@ Configure Kafka:
 **ActiveMQ**
 
 Prepare the directory stucture:
-- mkdir $SIBYLLA_HOME/3rd-party/jms-domain
-- cd $SIBYLLA_HOME/3rd-party/jms-domain
-- tar xvzf $SIBYLLA_HOME/downloads/apache-activemq-5.15.9-bin.tar.gz
-- ln -s apache-activemq-5.15.9 activemq
 
-- Remove the transportConnector with name="amqp"
-  - cd activemq/conf
-  - vi activemq.xml
-    - Remove the line with the amqp and mqtt transportConnector
-    ```
-    <transportConnector name="amqp" uri="amqp://0.0.0.0:5672?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+`-$ mkdir $SIBYLLA_HOME/3rd-party/jms-domain`
 
+`-$ cd $SIBYLLA_HOME/3rd-party/jms-domain`
+
+`-$ tar xvzf $SIBYLLA_HOME/downloads/apache-activemq-5.15.9-bin.tar.gz`
+
+`-$ ln -s apache-activemq-5.15.9 activemq`
+
+Remove the transportConnector with name="amqp"
+
+`-$ cd activemq/conf`
+
+`-$ vi activemq.xml`
+
+- Remove the line with the amqp and mqtt transportConnector
+  ```
+  <transportConnector name="amqp" uri="amqp://0.0.0.0:5672?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+
+  ```
+- Set autopurge of the destination with no consumers after long time (NOTE: Only if used for non persistence scenario)
+  - Replace the row
     ```
-    - Set autopurge of the destination with no consumers after long time (NOTE: Only if used for non persistence scenario)
-      - Replace the row
-        ```
-        <broker xmlns="http://activemq.apache.org/schema/core" brokerName="localhost" dataDirectory="${activemq.data}">
-        ```
-      - With the following
-        ```
-        <broker xmlns="http://activemq.apache.org/schema/core" brokerName="localhost" persistent="false" schedulePeriodForDestinationPurge="3600000">
-        ```
-    - Queue autopurge (NOTE: Only if used for non persistence scenario)
-      - Replace the row
-        ```
-        <policyEntry topic=">" >
-        ```
-      - With the following
-        ```
-        <policyEntry topic=">" gcInactiveDestinations="true" inactiveTimoutBeforeGC="600000" >
-        ```
+    <broker xmlns="http://activemq.apache.org/schema/core" brokerName="localhost" dataDirectory="${activemq.data}">
+    ```
+  - With the following
+    ```
+    <broker xmlns="http://activemq.apache.org/schema/core" brokerName="localhost" persistent="false" schedulePeriodForDestinationPurge="3600000">
+    ```
+- Queue autopurge (NOTE: Only if used for non persistence scenario)
+  - Replace the row
+    ```
+    <policyEntry topic=">" >
+    ```
+  - With the following
+    ```
+    <policyEntry topic=">" gcInactiveDestinations="true" inactiveTimoutBeforeGC="600000" >
+    ```
 
 **EMQX**
 
