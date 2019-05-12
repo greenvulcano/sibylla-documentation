@@ -456,52 +456,82 @@ Remove the transportConnector with name="amqp"
 **EMQX**
 
 Untar the product:
-- cd $SIBYLLA_HOME/3rd-party/mqtt-domain
-- unzip $SIBYLLA_HOME/downloads/emqx-ubuntu18.04-v3.1-beta.2.zip
+
+`-$ cd $SIBYLLA_HOME/3rd-party/mqtt-domain`
+
+`-$ unzip $SIBYLLA_HOME/downloads/emqx-ubuntu18.04-v3.1-beta.2.zip`
+
 
 Version the installation to simplify future upgrade and tranfer of data:
-- mv emqx emqx-v3.1-beta.2
-- ln -s emqx-v3.1-beta.2 emqx
+
+`-$ mv emqx emqx-v3.1-beta.2`
+
+`-$ ln -s emqx-v3.1-beta.2 emqx`
+
 
 Configure EMQX:
-- The configuration file is under ./emqx/etc
-  - The basic installation does not require any specific configuration
+The configuration file is under `./emqx/etc`
+The basic installation does not require any specific configuration
 
 **Metabase**
 
 Prepare the directory stucture:
-- mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase
-- mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/bin
-- mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/config
-- mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/data
-- mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/logs
-- mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/scripts
+
+`-$ mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase`
+
+`-$ mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/bin`
+
+`-$ mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/config`
+
+`-$ mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/data`
+
+`-$ mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/logs`
+
+`-$ mkdir $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/scripts`
+
 
 Untar the product:
-- cd $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/bin
-- cp $SIBYLLA_HOME/downloads/metabase.jar .
+
+`-$ cd $SIBYLLA_HOME/3rd-party/analytics-domain/metabase/bin`
+
+`-$ cp $SIBYLLA_HOME/downloads/metabase.jar .`
+
 
 Configure Metabase:
-- cd $SIBYLLA_HOME/3rd-party/analytics-domain/metabase
-- vi scripts/start.sh (only if necessary to change exposed port)
+
+`-$ cd $SIBYLLA_HOME/3rd-party/analytics-domain/metabase`
+
+`-$ vi scripts/start.sh (only if necessary to change exposed port)`
+
 
 Start/stop Metabase:
-- cd $SIBYLLA_HOME/3rd-party/analytics-domain/metabase
-- scripts/start.sh
-- scripts/stop.sh
+
+`-$ cd $SIBYLLA_HOME/3rd-party/analytics-domain/metabase`
+
+`-$ scripts/start.sh`
+
+`-$ scripts/stop.sh`
+
 
 ### Console - BackEnd installation & setup
 
 In order to install the WebApp's backend service, move into `sibylla/sibylla-console`, [download the console](TODO) and unzip the file.
 Than you have to run the following commands:
 
-- `cd backend`
-- `npm install --save`
-- `cd lib`
-- `mkdir config`
-- `cd config`
-- `touch environment.ts`
-- `nano/vi/vim environment.ts`
+`-$ cd backend`
+
+`-$ npm install --save`
+
+`-$ cd lib`
+
+`-$ mkdir config`
+
+`-$ cd config`
+
+`-$ touch environment.ts`
+
+`-$ nano/vi/vim environment.ts`
+
 
 - Copy/paste the following configuration:
 
@@ -520,37 +550,43 @@ Than you have to run the following commands:
 - One MongoDB instance: `mongodb://*MONGO_URL*/gv_iot_webapp`
 - Multiple MongoDB instance: `mongodb://*1_MONGO_URL*,*2_MONGO_URL*,.../gv_iot_webapp`
 
-(`webGisFolderPath` is the absolute path to a static folder on the machine, where you will save the KML files.
-`webGisWritePath` is the relative path inside the machine to the same folder.)
+> Note: `webGisFolderPath` is the absolute path to a static folder on the machine, where you will save the KML files.
+>       `webGisWritePath` is the relative path inside the machine to the same folder.
 
 Node's default port is `3000`, you can change it by modifying the server.js inside backend/dist/ folder.
 
 Return to `/backend`
-- `sudo npm run build`
+
+`-$ sudo npm run build`
 
 This will create a `dist` folder with the production-ready code of the backend application.
 
-- `sudo scp package.json dist`
-- `cd dist`
-- `sudo npm install`
-- `sudo npm run start server.js`
+`-$ sudo scp package.json dist`
+
+`-$ cd dist`
+
+`-$ sudo npm install`
+
+`-$ sudo npm run start server.js`
 
 (`CTRL + C` when you will see "Express server listening on port ####")
 
 Now you can either run the app with nohup (npm run prod), or by following the commands down here we will install forever.js, which helps us to keep track of our node services:
 
-- `cd`
-- `[sudo] npm install forever -g`
-- `[sudo] forever start backend/dist/server.js`
+`-$ cd`
+
+`-$ [sudo] npm install forever -g`
+
+`-$ [sudo] forever start backend/dist/server.js`
 
 
 You can check if everything is working correctly by typing:
 
-- `[sudo] forever list`
+`-$ [sudo] forever list`
 
-- Copy the logfile path of your forever.js process retrieved by the above command
+Copy the logfile path of your forever.js process retrieved by the above command
 
-- `cat ########.log`
+`-$ cat ########.log`
 
 The installation is finished, your application will be hosted on `localhost:3000` or either the port you've specified in the `server.js` file.
 
@@ -561,11 +597,14 @@ There are two solution for installation & setup of FrontEnd Console:
 - Dist folder with static file and Nginx routing
 - Full source code with `npm start`
 
-### Dist folder with static file and Nginx routing
+#### Dist folder with static file and Nginx routing
 To configurate the frotned console run the following commands:
-- `cd frontend/dist/webapp/assets`
-- `nano/vi/vim appConfig.json`
-- Set your endpoints:
+
+`-$ cd frontend/dist/webapp/assets`
+
+`-$ nano/vi/vim appConfig.json`
+
+Set your endpoints:
 ```
     {
     "production": true,
@@ -583,7 +622,7 @@ To configurate the frotned console run the following commands:
 }
 
 ```
-- `cp appConfig.json data/`
+`-$ cp appConfig.json data/`
 
 After all add these following instuction in your Nginx's configuration and restart it:
 ```
@@ -605,10 +644,14 @@ After all add these following instuction in your Nginx's configuration and resta
 
 #### Full source code with `npm start`
 To configurate the frotned console run the following commands:
-- `cd frontend/src/assets`
-- `touch appConfig.json`
-- `nano/vi/vim appConfig.json`
-- Copy/paste the following configuration:
+
+`-$ cd frontend/src/assets`
+
+`-$ touch appConfig.json`
+
+`-$ nano/vi/vim appConfig.json`
+
+Copy/paste the following configuration:
 ```
     {
     "production": false,
@@ -626,12 +669,15 @@ To configurate the frotned console run the following commands:
 }
 
 ```
-- `cp appConfig.json data/`
-- `cd ../../`
-- `npm install --save`
-- `npm start`
+`-$ cp appConfig.json data/`
 
-The WebApp start at `4200` port.
+`-$ cd ../../`
+
+`-$ npm install --save`
+
+`-$ npm start`
+
+The WebApp starts at `4200` port.
 
 
 ### Configure the application
