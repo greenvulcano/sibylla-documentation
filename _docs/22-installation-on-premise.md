@@ -432,7 +432,6 @@ Remove the transportConnector with name="amqp"
 - Remove the line with the amqp and mqtt transportConnector
   ```
   <transportConnector name="amqp" uri="amqp://0.0.0.0:5672?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
-
   ```
 - Set autopurge of the destination with no consumers after long time (NOTE: Only if used for non persistence scenario)
   - Replace the row
@@ -543,14 +542,13 @@ Than you have to run the following commands:
         webGisFolderPath: "",
         webGisWritePath: ""
     };
-
 ```
 
 `mongoUrl` syntaxis is divided in two methods:
 - One MongoDB instance: `mongodb://*MONGO_URL*/gv_iot_webapp`
 - Multiple MongoDB instance: `mongodb://*1_MONGO_URL*,*2_MONGO_URL*,.../gv_iot_webapp`
 
-> Note: `webGisFolderPath` is the absolute path to a static folder on the machine, where you will save the KML files.
+> NOTE: `webGisFolderPath` is the absolute path to a static folder on the machine, where you will save the KML files.
 >       `webGisWritePath` is the relative path inside the machine to the same folder.
 
 Node's default port is `3000`, you can change it by modifying the server.js inside backend/dist/ folder.
@@ -606,7 +604,7 @@ To configurate the frotned console run the following commands:
 
 Set your endpoints:
 ```
-    {
+{
     "production": true,
     "apiUrl": "",
     "nodeApiUrl": "",
@@ -620,7 +618,6 @@ Set your endpoints:
         "reconnectDelay": 200
     }
 }
-
 ```
 `-$ cp appConfig.json data/`
 
@@ -639,7 +636,6 @@ server {
        alias *path_of_webapp*/static;
    }
 }
-
 ```
 
 #### Full source code with `npm start`
@@ -667,7 +663,6 @@ Copy/paste the following configuration:
         "reconnectDelay": 200
     }
 }
-
 ```
 `-$ cp appConfig.json data/`
 
