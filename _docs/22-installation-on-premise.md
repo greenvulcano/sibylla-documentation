@@ -626,7 +626,7 @@ Set your endpoints:
 
 After all add these following instuction in your Nginx's configuration and restart it:
 ```
-    server {
+server {
          listen 8080;
 
    index index.html;
@@ -653,7 +653,7 @@ To configurate the frotned console run the following commands:
 
 Copy/paste the following configuration:
 ```
-    {
+{
     "production": false,
     "apiUrl": "",
     "nodeApiUrl": "",
